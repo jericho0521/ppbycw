@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+h1 {
+    font-family: "Electrolize", sans-serif; 
+    color: #ffffff; 
+    font-size: 2.5em; 
+    margin-bottom: 0; 
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: #1b1b328e;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-bottom: 1px solid #55555582;
+    overflow: hidden;
+    transition: 0.4s; 
+}
+
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 10px;
+}
+
+.nav-bar ul li a {
+    font-family: "Electrolize", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+    padding: 7px;
+}
+
+.nav-bar ul li a:hover {
+    color: #7fb6ff7d;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-bar ul {
+        text-align: center; /* Center align links */
+      }
+    
+      .nav-bar ul li {
+        margin: 5px 10px; /* Vertical margin for links */
+      }
+
+    .image-wrapper {
+        width: 100%; 
+    }
+
+    .nav-bar ul li a {
+        font-size: 0.9em; 
+    }
+
+    .nav-bar {
+        width: 100%;
+        background-color: #1b1b32;
+        padding: 5px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        border-bottom: 1px solid #555555;
+    }
+
+
+}

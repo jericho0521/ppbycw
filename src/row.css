@@ -1,0 +1,26 @@
+.row-bar {
+  width: 100vw; 
+  margin: 0;
+  padding: 20px 0; 
+  background-color: #1b1b32a1; 
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
+}
+
+  .row-bar2 {
+    width: 100vw; 
+    margin: 0;
+    padding: 20px 0; 
+    background-color: #1b21498e; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+  }
+
+  .row-bar3 {
+    width: 100vw; 
+    margin: 0;
+    padding: 20px 0; 
+    background-color: #404b918e; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+  }

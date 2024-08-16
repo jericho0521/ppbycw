@@ -1,0 +1,36 @@
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 15px;
+    font-size: 24px;
+    background-color: #1b1b32;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .back-to-top:hover {
+    background-color: #555555;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .back-to-top {
+      font-size: 18px;
+      padding: 8px 12px;
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+  

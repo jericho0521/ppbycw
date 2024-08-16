@@ -1,0 +1,49 @@
+.about-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin: 20px;
+  }
+  
+  .about-heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin-right: 40px;
+    flex-shrink: 0; 
+  }
+  
+  .about-content {
+    max-width: 600px;
+  }
+  
+  .about-content p {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+    }
+  
+    .about-heading {
+      font-size: 32px; 
+      margin-right: 0;
+      margin-bottom: 20px; 
+    }
+  
+    .about-content {
+      max-width: 100%; 
+    }
+  
+    .about-content p {
+      font-size: 16px; 
+    }
+  
+    .about-content p {
+      font-size: 16px; 
+    }
+  }
