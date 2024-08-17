@@ -82,7 +82,7 @@ function Home() {
               <img src={image3} alt="Playstation 5" />
               <div 
               className="overlay-text">
-              <div className="initial-text">Playstation 5</div>
+              <div className="initial-text">Console Gaming</div>
               <div className="hover-text">Playstation 5
                 </div>
               </div>
