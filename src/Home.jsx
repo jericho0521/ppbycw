@@ -67,7 +67,7 @@ function Home() {
               <div className="initial-text">PC Gaming</div>
               <div className="hover-text">Specifications:
                 <p>Ryzen 5 5500
-                <p>RTX 3070
+                <p>GEFORCE RTX 3070
                 <p>16GB DDR4 RAM
                 <p>27" Samsung g5 51C 165hz</p>
                 </p>
