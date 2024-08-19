@@ -126,7 +126,7 @@ function Home() {
             <h1 class="about-heading">About Us</h1>
               <div class="about-content">
                   <p>Project Play by CW founded in 2024</p>
-                  <p>Project Play is more than just a gaming hub. It's space where passions come alive,
+                  <p>Project Play by CW is more than just a gaming hub. It's space where passions come alive,
                     where everyone, friends and family could come together, have some fun and find a sense of belonging.
                     It’s not just about the games we play, but the connections we build.</p>
               </div>
