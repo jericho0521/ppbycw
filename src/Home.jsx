@@ -141,9 +141,9 @@ function Home() {
               <div class="about-container">
               <div class="about-content">
               <p>Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
-              Project Play is here to welcome you.
+              Project Play by CW is here to welcome you.
               It's a place where your enthusiasm is shared, your victories celebrated, and where every moment spent here feels like a part of home.
-              At Project Play, you’re never just a player, you’re a valued member of a family. Welcome to a place where you belong.</p>
+              At Project Play by CW, you’re never just a player, you’re a valued member of a family. Welcome to a place where you belong.</p>
               </div>
               </div>
 
