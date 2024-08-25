@@ -11,6 +11,7 @@ import com4 from './community4.png';
 import com5 from './community5.png';
 import com6 from './community6.png';
 import store from './store.png';
+import newprice from './pricingupdate.png';
 
 export {
   logo,
@@ -25,5 +26,6 @@ export {
   com4,
   com5,
   com6,
-  store
+  store,
+  newprice
 };

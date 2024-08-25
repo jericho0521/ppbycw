@@ -15,7 +15,8 @@ import {
   com4, 
   com5, 
   com6, 
-  store 
+  store,
+  newprice
 } from './Images';
 
 
@@ -28,7 +29,7 @@ function Home() {
         <div className="logo-image">
           <img src={logo} className="image-item" alt="Project Play Logo" />
           </div>
-            <a href="https://waitwhile.com/locations/projectplaybycw/r/welcome" target="_blank" className="button">
+            <a href="https://wa.me/601116281524" target="_blank" className="button">
             <h4 className="montserrat-bold">RESERVATION</h4>
             </a>
           </div>
@@ -66,13 +67,14 @@ function Home() {
               className="overlay-text">
               <div className="initial-text">PC Gaming</div>
               <div className="hover-text">Specifications:
-                <p>Ryzen 5 5500
-                <p>GEFORCE RTX 3070
-                <p>16GB DDR4 RAM
-                <p>27" Samsung g5 51C 165hz</p>
-                </p>
-                </p>
-                </p>
+
+              <ul>
+              <li>Ryzen 5 5500</li>
+              <li>GEFORCE RTX 3070</li>
+              <li>16GB DDR4 RAM</li>
+              <li>27" Samsung G5 51C 165Hz</li>
+            </ul>
+
                 </div>
               </div>
           </div>
@@ -84,18 +86,16 @@ function Home() {
               className="overlay-text">
               <div className="initial-text">Playstation 5</div>
               <div className="hover-text">
-              <p>Games:
-              <p>FC 25
-              <p>UFC 5
-              <p>Overcooked
-              <p>NBA 2k24
-              <p>Tekken 8
-              </p>
-              </p>
-              </p>
-              </p>
-              </p>
-              </p>
+
+              <p>Games:</p>
+              <ul>
+                <li>FC 25</li>
+                <li>UFC 5</li>
+                <li>Overcooked</li>
+                <li>NBA 2K24</li>
+                <li>Tekken 8</li>
+              </ul>
+    
                 </div>
               </div>
           </div>
@@ -118,7 +118,7 @@ function Home() {
 
               {/* PRICE */}
               <div className="image-wrapper-price">
-                  <img src={price} opacity="100%" alt="Pricing"/>
+                  <img src={newprice} opacity="100%" alt="Pricing"/>
               </div>
 
               {/* MEMBER */}

@@ -28,6 +28,14 @@ function Footer() {
         </div>
       </div>
 
+      <div className="hiring">
+        <h3><b>Join Us</b></h3>
+        <p>Are you keen on joining our team? </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWnzarY6xwSnDLG53cP9TNWO-lzu8nsY9-5AFEE510WmfvmQ/viewform" target="_blank" className="hbutton">
+            <h4 className="montserrat-bold">APPLY HERE</h4>
+            </a>     
+      </div>
+
       <div className="location-text">
         <h3><b>Find Us</b></h3>
         <p><b>Project Play by CW</b></p>
@@ -39,6 +47,8 @@ function Footer() {
         </p>
       </div>
 
+      
+
       <div className="location-info">
         <div className="map-container">
           <iframe
@@ -47,10 +57,11 @@ function Footer() {
             title="Google Map"
           ></iframe>
         </div>
+
       </div>
 
       <div className="footer-copyright">
-        <p>Copyright &copy; {new Date().getFullYear()} Project Play by CW | All rights reserved.</p>
+        <p>Copyright &copy; {new Date().getFullYear()} Project Play By CW | All rights reserved.</p>
       </div>
     </div>
   );
