@@ -82,8 +82,20 @@ function Home() {
               <img src={image3} alt="Playstation 5" />
               <div 
               className="overlay-text">
-              <div className="initial-text">Console Gaming</div>
-              <div className="hover-text">Playstation 5
+              <div className="initial-text">Playstation 5</div>
+              <div className="hover-text">
+              <p>Games:
+              <p>FC 25
+              <p>UFC 5
+              <p>Overcooked
+              <p>NBA 2k24
+              <p>Tekken 8
+              </p>
+              </p>
+              </p>
+              </p>
+              </p>
+              </p>
                 </div>
               </div>
           </div>
@@ -125,8 +137,8 @@ function Home() {
           <div class="about-container">
             <h1 class="about-heading">About Us</h1>
               <div class="about-content">
-                  <p>Project Play by CW founded in 2024</p>
-                  <p>Project Play by CW is more than just a gaming hub. It's space where passions come alive,
+                  <p>Project Play By CW founded in 2024</p>
+                  <p>Project Play By CW is more than just a gaming hub. It's space where passions come alive,
                     where everyone, friends and family could come together, have some fun and find a sense of belonging.
                     It’s not just about the games we play, but the connections we build.</p>
               </div>
@@ -141,9 +153,9 @@ function Home() {
               <div class="about-container">
               <div class="about-content">
               <p>Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
-              Project Play by CW is here to welcome you.
+              Project Play By CW is here to welcome you.
               It's a place where your enthusiasm is shared, your victories celebrated, and where every moment spent here feels like a part of home.
-              At Project Play by CW, you’re never just a player, you’re a valued member of a family. Welcome to a place where you belong.</p>
+              At Project Play By CW, you’re never just a player, you’re a valued member of a family. Welcome to a place where you belong.</p>
               </div>
               </div>
 
