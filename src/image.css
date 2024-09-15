@@ -27,6 +27,7 @@
     scroll-behavior: smooth;
 }
 
+
 .image-wrapper img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
