@@ -30,8 +30,10 @@ function Home() {
           <img src={logo} className="image-item" alt="Project Play Logo" />
           </div>
             <a href="https://wa.me/601116281524" target="_blank" className="button">
-            <h4 className="montserrat-bold">CONTACT US</h4>
+            <h4 className="montserrat-bold">RESERVATION</h4>
             </a>
+            <br></br>
+            <h6>-- ONLY FOR RACING SIMMULATOR & PLAYSTATION 5--</h6>
           </div>
 
       {/* SERVICES AND RIGS SECTION */}
