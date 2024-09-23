@@ -33,7 +33,7 @@ function Home() {
             <h4 className="montserrat-bold">RESERVATION</h4>
             </a>
             <br></br>
-            <h6>*APPLICABLE ONLY FOR PLAYSTATION 5 & RACING SIMULATOR ONLY</h6>
+            <h6>*APPLICABLE ONLY FOR PLAYSTATION 5 & RACING SIMULATOR</h6>
           </div>
 
       {/* SERVICES AND RIGS SECTION */}
