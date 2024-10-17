@@ -25,6 +25,15 @@
     scroll-behavior: smooth;
   }
 
+  .row-bar4 {
+    width: 100vw; 
+    padding: 70px 0; 
+    margin-bottom: 0;
+    background-color: #1a005700; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+  }
+
   .row-bar-full{
     width: 100vw; 
     margin: 0;

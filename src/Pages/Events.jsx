@@ -42,23 +42,23 @@ const ImageCarousel = () => {
     return (
         <div className="carousel-container">
             <Slider {...settings}>
-                <div className="image-wrapper">
-                    <img src={mc1} alt="Image 1" />
+                <div className="image-wrapper-event">
+                    <img src={mc1} alt="monash1" />
                 </div>
-                <div className="image-wrapper">
-                    <img src={mc2} alt="Image 2" />
+                <div className="image-wrapper-event">
+                    <img src={mc2} alt="monash2" />
                 </div>
-                <div className="image-wrapper">
-                    <img src={mc3} alt="Image 3" />
+                <div className="image-wrapper-event">
+                    <img src={mc3} alt="monash3" />
                 </div>
-                <div className="image-wrapper">
-                    <img src={mc4} alt="Image 4" />
+                <div className="image-wrapper-event">
+                    <img src={mc4} alt="monash4" />
                 </div>
-                <div className="image-wrapper">
-                    <img src={mc5} alt="Image 5" />
+                <div className="image-wrapper-event">
+                    <img src={mc5} alt="monash5" />
                 </div>
-                <div className="image-wrapper">
-                    <img src={mc6} alt="Image 6" />
+                <div className="image-wrapper-event">
+                    <img src={mc6} alt="monash6" />
                 </div>
             </Slider>
         </div>
@@ -67,7 +67,7 @@ const ImageCarousel = () => {
 
 function Events() {
     return (
-        <div className="row-bar3">
+        <div className="row-bar4">
             {/* Main Event Container */}
             <div className="event-container"> 
                 <div className='innertext'>

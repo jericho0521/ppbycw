@@ -1,7 +1,7 @@
 import logo from './Project Play_Logo.png'; 
 import image1 from './rs_ppbycw.png';
 import image2 from './pc_ppbycw.png';
-import image3 from './L1050222.png';
+import image3 from './ps5new.png';
 import price from './price_ppbycw.png';
 import member from './member_ppbycw.png';
 import com1 from './community1.png';
