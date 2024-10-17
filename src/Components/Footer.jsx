@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
-import './social.css';
+
 
 function Footer() {
   return (

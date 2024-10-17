@@ -4,6 +4,10 @@ p {
     font-family: "Electrolize", sans-serif;
 }
 
+.map-container{
+    border-radius: 100px;
+}
+
 .footer-bar {
     width: 100%;
     background-color: #1b1b32;

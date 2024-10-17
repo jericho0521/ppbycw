@@ -2,7 +2,7 @@
   width: 100vw; 
   margin: 0;
   padding: 20px 0; 
-  background-color: #1b1b32a1; 
+  background-color: #1b1b32; 
   box-sizing: border-box; 
   scroll-behavior: smooth;
 }
@@ -21,6 +21,15 @@
     margin: 0;
     padding: 20px 0; 
     background-color: #404b918e; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+  }
+
+  .row-bar-full{
+    width: 100vw; 
+    margin: 0;
+    padding: 20px 0; 
+    background-color: #1b1b32; 
     box-sizing: border-box; 
     scroll-behavior: smooth;
   }

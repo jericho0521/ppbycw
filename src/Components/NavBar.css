@@ -23,7 +23,6 @@ h1 {
     transition: 0.4s; 
 }
 
-
 .nav-bar ul {
     list-style: none;
     display: flex;
@@ -50,24 +49,7 @@ h1 {
     color: #7fb6ff7d;
 }
 
-
 @media screen and (max-width: 768px) {
-
-    .nav-bar ul {
-        text-align: center; /* Center align links */
-      }
-    
-      .nav-bar ul li {
-        margin: 5px 10px; /* Vertical margin for links */
-      }
-
-    .image-wrapper {
-        width: 100%; 
-    }
-
-    .nav-bar ul li a {
-        font-size: 0.9em; 
-    }
 
     .nav-bar {
         width: 100%;
@@ -81,7 +63,24 @@ h1 {
         justify-content: center; 
         align-items: center;
         border-bottom: 1px solid #555555;
+        transition: 0.4s;
     }
 
+    .nav-bar ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; 
+    }
 
+    .nav-bar ul li {
+        margin: 10px 0; /* Add vertical margin between menu items */
+    }
+
+    .nav-bar ul li a {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+        padding: 5px; /* Reduce padding for better fit */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Adjust heading size on mobile */
+    }
 }

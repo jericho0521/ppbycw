@@ -12,6 +12,14 @@ import com5 from './community5.png';
 import com6 from './community6.png';
 import store from './store.png';
 import newprice from './pricingupdate.png';
+import mc1 from './mc1.png';
+import mc2 from './monash2.png';
+import mc3 from './monash3.png';
+import mc4 from './monash4.png';
+import mc5 from './monash5.png';
+import mc6 from './monash6.png';
+
+
 
 export {
   logo,
@@ -27,5 +35,11 @@ export {
   com5,
   com6,
   store,
-  newprice
+  newprice,
+  mc1,
+  mc2,
+  mc3,
+  mc4,
+  mc5,
+  mc6
 };
