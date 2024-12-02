@@ -37,3 +37,7 @@ body, .events-container {
     border-radius: 5px;
     object-fit: cover;
 }
+
+.meow{
+    color: red;
+}
