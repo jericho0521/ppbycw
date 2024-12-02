@@ -1,103 +1,41 @@
 import React from 'react';
-import Slider from "react-slick";
 import './Events.css'; 
-import '../Assets/Font.css';
-import '../Assets/row.css';
-import '../Assets/arrow.css';
-import './About.css';
-import './Home.css'; 
-import { mc1, mc2, mc3, mc4, mc5, mc6 } from '../Images'; // Ensure these images are properly exported
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; // Import slick styles
+import { mc1, mc2, mc3, mc4, mc5, mc6 } from '../Images'; // Make sure these images are correctly imported
 
-// Custom Arrow Components
-const NextArrow = ({ onClick }) => {
+// Image Row Component
+const ImageRow = () => {
     return (
-        <div className="arrow next-arrow" onClick={onClick}>
-            <i className="arrow-icon">→</i> {/* Right arrow icon */}
-        </div>
-    );
-};
-
-const PrevArrow = ({ onClick }) => {
-    return (
-        <div className="arrow prev-arrow" onClick={onClick}>
-            <i className="arrow-icon">←</i> {/* Left arrow icon */}
-        </div>
-    );
-};
-
-// Image Carousel Component
-const ImageCarousel = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-    };
-
-    return (
-        <div className="carousel-container">
-            <Slider {...settings}>
-                <div className="image-wrapper-event">
-                    <img src={mc1} alt="monash1" />
-                </div>
-                <div className="image-wrapper-event">
-                    <img src={mc2} alt="monash2" />
-                </div>
-                <div className="image-wrapper-event">
-                    <img src={mc3} alt="monash3" />
-                </div>
-                <div className="image-wrapper-event">
-                    <img src={mc4} alt="monash4" />
-                </div>
-                <div className="image-wrapper-event">
-                    <img src={mc5} alt="monash5" />
-                </div>
-                <div className="image-wrapper-event">
-                    <img src={mc6} alt="monash6" />
-                </div>
-            </Slider>
+        <div className="image-row">
+            <img src={mc1} alt="monash1" className="image-item" />
+            <img src={mc2} alt="monash2" className="image-item" />
+            <img src={mc3} alt="monash3" className="image-item" />
+            <img src={mc4} alt="monash4" className="image-item" />
+            <img src={mc5} alt="monash5" className="image-item" />
+            <img src={mc6} alt="monash6" className="image-item" />
         </div>
     );
 };
 
 function Events() {
     return (
-        <div className="row-bar4">
-            {/* Main Event Container */}
-            <div className="event-container"> 
-                <div className='innertext'>
-                    <h1 className="event-heading">EVENTS WITH PROJECT PLAY</h1> 
-                </div>
-                <div className="event-content"> 
-                    <div className='innertext'>
-                        <p>If you're looking for the perfect venue to host your next event, we’ve got you covered. Find us at Project Play!</p>
-                    </div>
-                </div>
+        <div className="events-container">
+            <div className="event-details">
+                <div className='row-bar4'>
+                <h1>EVENTS WITH PROJECT PLAY</h1>
+                <p>If you're looking for the perfect venue to host your next event, we’ve got you covered. Find us at Project Play!</p>
                 <a href="https://wa.me/601116281524" target="_blank" rel="noopener noreferrer" className="button-event">
-                    <h4 className="montserrat-bold">CONTACT US</h4>
+                    CONTACT US
                 </a>
             </div>
+            </div>
 
-            {/* Past Events Section */}
-            <div className="row-bar-full">
-                <div className="event-container">
-                    <h1><b>PAST EVENTS</b></h1>
-                    <div className="event-content">
-                        <h2>Monash Cup 2024</h2>
-                        <div className='innertext'>
-                            <p>Highlights: Monash University hosted their Monash Cup 2024 at Project Play, 
-                            <br />where over 40 participants competed in an exciting Esports Tournament featuring top games like Valorant, Counter-Strike 2, League of Legends, and FC24.</p>
-                        </div>
-                    </div>
-                </div>
+            <div className="past-events">
+                <h1>PAST EVENTS</h1>
+                <h3>Monash Cup 2024</h3>
+                <p>Highlights: Monash University hosted their Monash Cup 2024 at Project Play...</p>
 
-                {/* Add ImageCarousel here */}
-                <ImageCarousel />
+                {/* Image Row Component */}
+                <ImageRow />
             </div>
         </div>
     );

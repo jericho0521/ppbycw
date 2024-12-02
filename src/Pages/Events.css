@@ -1,107 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
-body{
-    margin:0;
-    padding:0;
-}
-
-html {
-scroll-behavior: smooth;
-  }
-
-.event-container h1{
+body, .events-container {
+    margin: 0;
+    padding: 0;
     font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-}
-
-.event-content h2{
-    color: white;
-    font-family: "Electrolize", sans-serif;
-}
-
-
-.intro-section h1 {
-    font-size: 3rem;
-    font-family: Montserrat;
-    font-weight: 700;
-    margin-bottom: 10px;
     text-align: center;
 }
 
-.intro-section p {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.upcoming-events, .past-events, .feedback-section {
-    margin-top: 40px;
-}
-
-.event-card, .past-event-card {
-    background-color: #1b1b32a1; 
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.event-card h3, .past-event-card h3 {
-    font-size: 1.5rem;
-    color: #00bcd4;
-}
-
-.event-card p, .past-event-card p {
-    font-size: 1.1rem;
-}
-
-.register-button {
-    background-color: #00bcd4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.register-button:hover {
-    background-color: #0097a7;
-}
-
-.feedback-section p {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
+/* Button Styling */
 .button-event {
-    font-family: "Electrolize", sans-serif;
-    color: rgb(255, 255, 255);
-    padding: 9px 20px;
-    text-align: center;
-    text-decoration: solid;
+    color: #fff;
+    background-color: #00bcd4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
     display: inline-block;
-    cursor: pointer;
-    position: relative;
-    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-    border-radius: 5px; /* Rounded corners */
-    background-color: rgb(13, 32, 40);
-    box-shadow: 0 0px 9px rgb(80, 89, 100); 
-    margin-bottom: 60px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .button-event:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.432);
-    border-color: rgba(255, 255, 255, 0.595); /* Change border color on hover */
+    background-color: #0097a7;
 }
 
+/* Image Row Styling */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+}
 
-@media (max-width: 768px) {
-    .carousel-container {
-        width: 100%; /* Full width of the screen */
-        max-width: 90%; /* Make sure container doesn't overflow */
-        margin: 0 auto; /* Center container */
-        justify-content: center;
-    }
+.image-item {
+    height: 150px;
+    width: auto;
+    border-radius: 5px;
+    object-fit: cover;
 }
