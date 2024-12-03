@@ -84,7 +84,7 @@ function Home() {
                 <p>
                 <dt>AMD RYZEN 5 5500</dt>
                 <dt>MSI GEFORCE RTX 3070</dt>
-                <dt>DDR4 3200MT/s 16GB</dt>
+                <dt>DDR4 3200MHZ 16GB</dt>
                 <dt>27" 165Hz GAMING MONITOR</dt>
                 </p>
 
