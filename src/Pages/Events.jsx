@@ -32,7 +32,15 @@ function Events() {
             <div className="past-events">
                 <h1>PAST EVENTS</h1>
                 <h3>Monash Cup 2024</h3>
-                <p>Highlights: Monash University hosted their Monash Cup 2024 at Project Play...</p>
+                
+                <p>Highlights: Monash University hosted their Monash Cup 2024 at Project Play. Monash Cup was held for 3 days and had teams competing in 3 different games:
+                <ul>
+                    <li>Counter Strike 2</li>
+                    <li>Valorant</li>
+                    <li>League of Legends</li>
+                </ul>
+                </p>
+                
 
                 {/* Image Row Component */}
                 <ImageRow />
