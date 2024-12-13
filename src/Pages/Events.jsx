@@ -29,6 +29,7 @@ function Events() {
             </div>
             </div>
 
+            <div className='row-bar5'>
             <div className="past-events">
                 <h1>PAST EVENTS</h1>
                 <h3>Monash Cup 2024</h3>
@@ -44,6 +45,7 @@ function Events() {
 
                 {/* Image Row Component */}
                 <ImageRow />
+            </div>
             </div>
         </div>
     );

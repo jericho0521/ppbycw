@@ -29,7 +29,16 @@
     width: 100vw; 
     padding: 70px 0; 
     margin-bottom: 0;
-    background-color: #10163c; 
+    background-color: #1b1b32; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+  }
+
+  .row-bar5 {
+    width: 100vw; 
+    padding: 70px 0; 
+    margin-bottom: 0;
+    background-color: #1b1b329e; 
     box-sizing: border-box; 
     scroll-behavior: smooth;
   }
