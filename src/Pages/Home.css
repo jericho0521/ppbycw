@@ -3,6 +3,13 @@ body {
     padding: 0;
 }
 
+.logo-image{
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -223,6 +230,13 @@ body {
 
 
 @media (max-width: 768px) {
+
+    .logo-image img {
+        margin-right: 130px;
+        width: 350px; /* Set a smaller width */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
     .box-container {
         flex-direction: column; /* Stack the boxes vertically */
         align-items: center; /* Center align */
@@ -233,12 +247,7 @@ body {
         margin-top: 0;
     }
 
-    /* .logo-image {
-        width: auto; 
-        justify-content: center;
-        display: flex;
-        align-items: center;
-    } */
+
 
     .button {
         margin: 20px auto;      

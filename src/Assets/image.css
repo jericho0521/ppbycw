@@ -4,106 +4,52 @@
     justify-content: center;
     gap: 50px;
     margin-bottom: 70px;
-}
-
-.logo-image {
-    width: 150%;
+  }
+  
+  .logo-image {
+    width: 100%;
+    max-width: 150px;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    gap: 50px;
+    justify-content: center;
     align-items: center;
-}
-
-.image-item {
-    width: 70%; 
+  }
+  
+  .image-item {
+    width: 100%;
     height: auto; /* Maintain aspect ratio */
-}
-
-.image-wrapper {
+  }
+  
+  .image-wrapper,
+  .image-wrapper-event,
+  .image-wrapper-price,
+  .image-wrapper-c {
     position: relative;
     width: 48%;
     max-width: 500px;
     scroll-behavior: smooth;
-}
-
-.image-wrapper-event {
-    position: relative;
-    width: 48%;
-    max-width: 500px;
-    scroll-behavior: smooth;
-}
-
-
-.image-wrapper img {
+  }
+  
+  .image-wrapper img,
+  .image-wrapper-event img,
+  .image-wrapper-price img,
+  .image-wrapper-c img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
     cursor: pointer;
     transition: transform 0.3s;
     border-radius: 5px;
     opacity: 80%;
-}
-
-.image-wrapper-event img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer;
-    transition: transform 0.3s;
-    border-radius: 5px;
-    opacity: 80%;
-}
-
-.image-wrapper-price {
-    position: relative;
-    width: 48%;
-    max-width: 500px;
-    scroll-behavior: smooth;
-}
-
-.image-wrapper-price img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer;
-    transition: transform 0.3s;
-    border-radius: 0px;
-    /* opacity: 50%; */
-}
-
-
-
-
-.image-wrapper-c {
-    position: relative;
-    width: 48%;
-    max-width: 500px;
-    scroll-behavior: smooth;
-}
-
-.image-wrapper-c img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer;
-    transition: transform 0.3s;
-    border-radius: 5px;
-    opacity: 80%;
-}
-
-
-
-
-.image-wrapper img:hover {
+  }
+  
+  .image-wrapper img:hover,
+  .image-wrapper-event img:hover {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
     opacity: 40%;
-}
-
-.image-wrapper-event img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-    opacity: 40%;
-}
-
-.image-wrapper .overlay-text {
+  }
+  
+  .image-wrapper .overlay-text,
+  .image-wrapper-event .overlay-text {
     position: absolute;
-    display: inline-block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -114,24 +60,10 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     pointer-events: none;
     text-align: center;
-}
-
-.hover-text h1{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.hover-text p{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-
-.initial-text {
+  }
+  
+  .initial-text {
     position: absolute;
-    display: inline-block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -159,56 +91,34 @@
   .image-wrapper:hover .hover-text {
     opacity: 90%;
   }
-
+  
+  /* Media query for tablets and smaller devices */
   @media (max-width: 768px) {
+
     .image-wrapper,
+    .image-wrapper-event,
     .image-wrapper-price,
-    .image-wrapper-c,
-    .image-wrapper-event{
-        
-        width: 90%; /*image size*/
+    .image-wrapper-c {
+      width: 90%; /* Adjust image size */
     }
-
-    .image-wrapper img,
-    .image-wrapper-price img,
-    .image-wrapper-c img,
-    .image-wrapper-event {
-        border-radius: 5px; 
-    }
-
-    .image-wrapper .initial-text,
-    .image-wrapper, 
-    .image-wrapper-event {
-        font-size: 20px;
-    }
-
+  
+    .initial-text,
     .hover-text {
-        font-size: 15px;
+      font-size: 20px;
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  /* Media query for phones */
+  @media (max-width: 480px) {
     .image-wrapper,
+    .image-wrapper-event,
     .image-wrapper-price,
-    .image-wrapper-c,
-    .image-wrapper-event {
-        width: 90%; 
+    .image-wrapper-c {
+      width: 90%; /* Full width on small screens */
     }
-
-    .image-wrapper img,
-    .image-wrapper-price img,
-    .image-wrapper-c img,
-    .image-warpper-event img{
-        border-radius: 0; 
+  
+    .hover-text {
+      font-size: 15px;
     }
-
-    .hover-text p{
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        font-size: 14px;
-
-        
-    }
-
-}
+  }
   
