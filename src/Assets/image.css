@@ -15,9 +15,11 @@
   }
   
   .image-item {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
+    height: 150px;
+    width: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
   
   .image-wrapper,
   .image-wrapper-event,

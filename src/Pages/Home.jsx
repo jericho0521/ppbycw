@@ -256,10 +256,6 @@ function Home() {
               <img src={com2} alt="person2"/>
           </div>
 
-          {/* <div className="image-wrapper">
-              <img src={com3} />
-          </div> */}
-
           <div className="image-wrapper">
               <img src={com4} alt="person3"/>
           </div>
