@@ -227,6 +227,13 @@ body {
     font-size: 18px;
 }
 
+.hover-text h1{
+    font-size: 30px;
+}
+
+.hover-text p{
+    font-size: 20px;
+}
 
 
 @media (max-width: 768px) {
@@ -295,5 +302,13 @@ body {
 
     h6 {
         font-size: 6px;
+    }
+
+    .hover-text h1{
+        font-size: 16px;
+    }
+    
+    .hover-text p{
+        font-size: 14px;
     }
 }
