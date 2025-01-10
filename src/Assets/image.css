@@ -36,7 +36,7 @@
   .image-wrapper-price img,
   .image-wrapper-c img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
     cursor: pointer;
     transition: transform 0.3s;
     border-radius: 5px;
@@ -45,7 +45,7 @@
   
   .image-wrapper img:hover,
   .image-wrapper-event img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.05); 
     opacity: 40%;
   }
   
@@ -94,14 +94,14 @@
     opacity: 90%;
   }
   
-  /* Media query for tablets and smaller devices */
+
   @media (max-width: 768px) {
 
     .image-wrapper,
     .image-wrapper-event,
     .image-wrapper-price,
     .image-wrapper-c {
-      width: 90%; /* Adjust image size */
+      width: 90%;
     }
   
     .initial-text,
@@ -110,13 +110,13 @@
     }
   }
   
-  /* Media query for phones */
+
   @media (max-width: 480px) {
     .image-wrapper,
     .image-wrapper-event,
     .image-wrapper-price,
     .image-wrapper-c {
-      width: 90%; /* Full width on small screens */
+      width: 90%; 
     }
   
     .hover-text {

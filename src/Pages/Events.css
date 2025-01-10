@@ -52,9 +52,9 @@ body, .events-container {
    font-family: "Montserrat", sans-serif;
 
    text-shadow: 
-   0 0 2px #b0d4f5, /* Smaller and softer glow */
-   0 0 7px #b0d4f5, /* Slightly larger blue glow */
-   0 0 3px #00bfff; /* Fainter outer glow */
+   0 0 2px #b0d4f5,
+   0 0 7px #b0d4f5,
+   0 0 3px #00bfff;
 }
 
 .past-events h3{
@@ -72,13 +72,13 @@ body, .events-container {
     font-weight: bold;
     font-size: 32px;
     margin-bottom: 10px;
-    color: #bad8d0; /* Base text color (light blue) */
+    color: #bad8d0; 
     
-    /* Subtle Neon Glow */
+
     text-shadow: 
-        0 0 2px #b0d4f5, /* Smaller and softer glow */
-        0 0 7px #b0d4f5, /* Slightly larger blue glow */
-        0 0 3px #00bfff; /* Fainter outer glow */
+        0 0 2px #b0d4f5,
+        0 0 7px #b0d4f5, 
+        0 0 3px #00bfff; 
 
 }
 
@@ -89,20 +89,6 @@ body, .events-container {
     padding: 20px;
     justify-items: center;
 }
-
-/* .image-wrapper img {
-    width: 300px;
-    height: 300px;
-    object-fit: contain; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-wrapper img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
-} */
 
 
 .image-wrapper {
@@ -132,4 +118,18 @@ body, .events-container {
     .image-item-event {
         height: 150px;
     }
+}
+
+/* Remove these hover effects */
+.contact-info:hover,
+.operation-hours:hover,
+.location-text:hover,
+.hiring:hover {
+    transform: none; 
+}
+
+
+.image-item-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }

@@ -21,9 +21,9 @@ body {
 
 
 .title-container {
-    text-align: center; /* Centers the text inside the container */
+    text-align: center; 
     max-width: 800px;
-    margin: 0 auto; /* Centers the container itself */
+    margin: 0 auto; 
     padding: 1px;
     border-radius: 10px;
     background-color: transparent;
@@ -39,7 +39,7 @@ body {
     text-align: center;
     display: inline-block;
     cursor: pointer;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     transition: box-shadow 0.3s, border-color 0.3s;
     border-radius: 5px;
     background-color: rgb(13, 32, 40);
@@ -127,14 +127,14 @@ body {
 }
 .box-container {
     display: flex;
-    justify-content: space-between; /* Adds space between the boxes */
-    width: 100%; /* Ensures the container takes full width */
+    justify-content: space-between; 
+    width: 100%; 
 }
 
 .pricing-box,
 .member-box {
     position: relative;
-    width: 48%; /* Adjust as needed for spacing */
+    width: 48%; 
     scroll-behavior: smooth;
 }
 
@@ -150,7 +150,7 @@ body {
 
 .pricing-category {
     padding: 10px;
-    width: 100%; /* Adjust as needed */
+    width: 100%; 
     text-align: center;
 }
 
@@ -163,7 +163,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Added for spacing between packages */
+    gap: 15px;
 }
 
 .member-details {
@@ -173,7 +173,7 @@ body {
     border-radius: 4px;
     width: 500px;
     margin: 0 auto;
-    gap: 15px; /* Added for spacing between packages */
+    gap: 15px; 
     text-align: center;
 }
 
@@ -204,13 +204,13 @@ body {
     font-weight: bold;
     font-size: 32px;
     margin-bottom: 10px;
-    color: #bad8d0; /* Base text color (light blue) */
+    color: #bad8d0;
     
-    /* Subtle Neon Glow */
+
     text-shadow: 
-        0 0 2px #b0d4f5, /* Smaller and softer glow */
-        0 0 7px #b0d4f5, /* Slightly larger blue glow */
-        0 0 3px #00bfff; /* Fainter outer glow */
+        0 0 2px #b0d4f5,
+        0 0 7px #b0d4f5,
+        0 0 3px #00bfff; 
 }
 
 .pricing-details p {
@@ -240,13 +240,13 @@ body {
 
     .logo-image img {
         margin-right: 130px;
-        width: 350px; /* Set a smaller width */
-        height: auto; /* Maintain the aspect ratio */
+        width: 350px; 
+        height: auto; 
     }
 
     .box-container {
-        flex-direction: column; /* Stack the boxes vertically */
-        align-items: center; /* Center align */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     body h6{
@@ -268,36 +268,36 @@ body {
     
     .button h4 {
         font-size: 14px;
-        margin: 0; /* Remove default margin from h4 */
+        margin: 0; 
     }
     
     
 
     .pricing-box,
     .member-box {
-        width: 90%; /* Full width on mobile screens with some padding */
-        margin-bottom: 20px; /* Add spacing between the stacked boxes */
+        width: 90%; 
+        margin-bottom: 20px; 
     }
 
     .pricing-details,
     .member-details {
-        width: 100%; /* Make the details fill the container on small screens */
+        width: 100%; 
     }
 
     .pricing-category h2 {
-        font-size: 26px; /* Adjust heading size for smaller screens */
+        font-size: 26px; 
     }
 
     .package-title {
-        font-size: 17px; /* Adjust package title size */
+        font-size: 17px; 
     }
 
     .price {
-        font-size: 15px; /* Adjust price size */
+        font-size: 15px; 
     }
 
     .innertext {
-        width: 85%; /* Adjust inner text width */
+        width: 85%; 
     }
 
     h6 {

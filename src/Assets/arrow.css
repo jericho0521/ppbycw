@@ -4,9 +4,9 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    font-size: 2.5rem;  /* Arrow icon size */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for contrast */
-    color: white;  /* White color for better visibility */
+    font-size: 2.5rem;  
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;  
     padding: 10px;
     cursor: pointer;
     display: flex;
@@ -16,28 +16,28 @@
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darken background on hover */
-    transform: translateY(-50%) scale(1.1);  /* Slight scale on hover */
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);  
 }
 
 .next-arrow {
-    right: 15px; /* Position right arrow */
+    right: 15px; 
 }
 
 .prev-arrow {
-    left: 15px; /* Position left arrow */
+    left: 15px; 
 }
 
-/* Arrow Icon Styles */
+
 .arrow-icon {
-    font-size: 2.5rem;  /* Large arrow icons */
+    font-size: 2.5rem; 
 }
 
 @media (max-width: 768px) {
     
-    /* Arrow Icon Styles */
+
     .arrow-icon {
-        font-size: 1rem;  /* Large arrow icons */
+        font-size: 1rem;  
     }
 
 }
