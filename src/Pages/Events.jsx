@@ -1,6 +1,6 @@
 import React from 'react';
 import './Events.css'; 
-import { mc1, mc2, mc3, mc4, mc5, mc6 } from '../Images'; // Make sure these images are correctly imported
+import { mc1, mc2, mc3, mc4, mc5, mc6 } from '../Images'; 
 
 // Image Row Component
 const ImageRow = ({ images }) => {
@@ -15,7 +15,7 @@ const ImageRow = ({ images }) => {
     );
 };
 
-// Pass image array from the parent component
+
 function Events() {
     const images = [mc1, mc2, mc3, mc4, mc5, mc6];
     return (
