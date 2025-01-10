@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body, .events-container {
+.events-container {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
     text-align: center;
+    margin-top: 100px;
 }
 
 /* Button Styling */
@@ -24,112 +25,81 @@ body, .events-container {
     background-color: #ffffff40;
 }
 
-/* Image Row Styling */
-.image-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px 0;
-}
-
-.image-item-event{
-    width: 250px;
-    height: 250px; 
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-item-event:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
-}
-
-.past-events{
-    margin-top: 20px;
-}
-.past-events h1{
-    font-weight: bold;
-   font-family: "Montserrat", sans-serif;
-
-   text-shadow: 
-   0 0 2px #b0d4f5,
-   0 0 7px #b0d4f5,
-   0 0 3px #00bfff;
-}
-
-.past-events h3{
-    color: white;
-    font-weight: bold;
-}
-
-.image-row img{
-    width: auto;
-    height: 170px;
-}
-
-.event-details h1{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #bad8d0; 
-    
-
-    text-shadow: 
-        0 0 2px #b0d4f5,
-        0 0 7px #b0d4f5, 
-        0 0 3px #00bfff; 
-
-}
-
-.image-grid {
+/* Events specific image styling */
+.events-image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
     justify-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-
-.image-wrapper {
+.events-image-wrapper {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.events-image-item {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events-image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.past-events {
+    margin-top: 20px;
+}
+
+.past-events h1 {
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 
+        0 0 2px #b0d4f5,
+        0 0 7px #b0d4f5,
+        0 0 3px #00bfff;
+}
+
+.past-events h3 {
+    color: white;
+    font-weight: bold;
+}
+
+.event-details h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #bad8d0;
+    text-shadow: 
+        0 0 2px #b0d4f5,
+        0 0 7px #b0d4f5,
+        0 0 3px #00bfff;
 }
 
 /* Responsive Adjustments */
 @media screen and (min-width: 1024px) {
-    .image-grid {
+    .events-image-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .image-item-event {
-        height: 200px;
+        gap: 25px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    .events-image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .image-item-event {
-        height: 150px;
+    .events-image-item {
+        height: 200px;
     }
-}
-
-/* Remove these hover effects */
-.contact-info:hover,
-.operation-hours:hover,
-.location-text:hover,
-.hiring:hover {
-    transform: none; 
-}
-
-
-.image-item-event:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
