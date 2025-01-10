@@ -37,11 +37,15 @@ function Footer() {
       </div>
 
       <div className="location-text">
-        <h3><FaMapMarkerAlt /> Find Us</h3>
-        <p><strong>Project Play by CW</strong></p>
-        <p>70, Jalan PJS 11/7,</p>
-        <p>Bandar Sunway, 47500,</p>
-        <p>Subang Jaya, Selangor</p>
+        <div className="location-info" style={{ textAlign: 'left' }}>
+          <h3><FaMapMarkerAlt /> Find Us</h3>
+          <p>
+            <strong>Project Play By CW</strong><br />
+            70, Jalan PJS 11/7,<br />
+            Bandar Sunway, 47500,<br />
+            Subang Jaya, Selangor
+          </p>
+        </div>
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31737.702276204226!2d101.5996466504807!3d3.073553994907396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b0214d3a77b%3A0xd30100d50fe650b0!2s70%2C%20Jalan%20PJS%2011%2F7%2C%20Bandar%20Sunway%2C%2047500%20Subang%20Jaya%2C%20Selangor!5e0!3m2!1sen!2smy!4v1699279814492!5m2!1sen!2smy"
