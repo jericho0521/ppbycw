@@ -69,7 +69,7 @@ function Events() {
                     <div className="innertext">
                         <p>If you're looking for the perfect venue to host your next event, <br />we've got you covered. Find us at Project Play!</p>
                     </div>
-                    <a href="https://wa.me/601116281524" target="_blank" rel="noopener noreferrer" className="button-event">
+                    <a href="#event-form-section" className="button-event">
                         CONTACT US
                     </a>
                 </div>
@@ -94,7 +94,7 @@ function Events() {
             </div>
 
             <div className="row-bar6">
-                <div className="event-form-section">
+                <div className="event-form-section" id="event-form-section">
                     <h1>EVENT INQUIRY</h1>
                     <div className="event-form-container">
                         <h2>Event Inquiry Form</h2>

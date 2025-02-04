@@ -64,7 +64,7 @@
 .row-bar6 {
     margin: 0;
     padding: 40px 0;
-    background-color: rgba(41, 41, 79, 0); 
+    background-color: rgba(41, 41, 79, 0.499); 
     position: relative;
 }
 
