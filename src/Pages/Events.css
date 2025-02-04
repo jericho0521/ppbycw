@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+html {
+    scroll-behavior: smooth;  /* Enable smooth scrolling */
+}
+
 .events-container {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
     text-align: center;
     margin-top: 100px;
+    scroll-margin-top: 100px;  /* Add margin for fixed header */
 }
 
 /* Button Styling */
@@ -217,4 +222,8 @@
         margin: 0;
         padding: 10px 0;
     }
+}
+
+#event-form-section {
+    scroll-margin-top: 100px;  /* Offset for fixed header */
 }

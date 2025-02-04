@@ -62,8 +62,8 @@ function Events() {
 
     const images = [mc1, mc2, mc3, mc4, mc5, mc6];
     return (
-        <div className="events-container">
-            <div className="event-details" style={{marginTop: '-100px'}}>
+        <main className="events-container">
+            <section className="event-details" style={{marginTop: '-100px'}}>
                 <div className="row-bar4">
                     <h1>EVENTS WITH <br />PROJECT PLAY</h1>
                     <div className="innertext">
@@ -73,7 +73,7 @@ function Events() {
                         CONTACT US
                     </a>
                 </div>
-            </div>
+            </section>
 
             <div className="row-bar5">
                 <div className="past-events">
@@ -154,7 +154,7 @@ function Events() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 
