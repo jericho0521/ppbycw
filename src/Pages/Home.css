@@ -112,6 +112,11 @@ body {
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    font-size: 1.3em;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 html {
@@ -235,6 +240,25 @@ body {
     font-size: 20px;
 }
 
+.about-container {
+    margin: 20px auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.about-content {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-heading {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-left: 40px;
+}
 
 @media (max-width: 768px) {
 
@@ -297,7 +321,11 @@ body {
     }
 
     .innertext {
-        width: 85%; 
+        width: 85%;
+        font-size: 1.1em;  /* Reduced from 1.4em */
+        line-height: 1.6;
+        letter-spacing: 1.2px;
+        text-align: center;
     }
 
     h6 {
@@ -311,4 +339,52 @@ body {
     .hover-text p{
         font-size: 14px;
     }
+
+    .about-container {
+        margin: 10px auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .about-content {
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .about-heading {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        margin-bottom: 15px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f141e;  /* Dark background to match your site */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #87CEEB;  /* Light blue to match your accent color */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bad8d0;  /* Lighter shade on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #87CEEB #0f141e;
 }

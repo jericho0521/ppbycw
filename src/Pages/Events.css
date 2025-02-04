@@ -56,8 +56,113 @@
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
+.row-bar5 {
+    margin: 0;
+    padding: 40px 0;
+}
+
+.row-bar6 {
+    margin: 0;
+    padding: 40px 0;
+    background-color: rgba(41, 41, 79, 0); 
+    position: relative;
+}
+
+.row-bar6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg, 
+        /* rgba(13, 32, 40, 0.9) 0%,
+        rgba(27, 27, 50, 0.8) 100% */
+    );
+    z-index: -1;
+}
+
+.event-form-section {
+    position: relative;
+    padding: 40px 20px;
+    z-index: 1;
+}
+
+.event-form-section h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #bad8d0;  /* Changed back to match other headings */
+    text-shadow: 
+        0 0 2px #b0d4f5,
+        0 0 7px #b0d4f5,
+        0 0 3px #00bfff;
+}
+
+.event-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(27, 27, 50, 0.95);  /* Slightly more opaque */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* Added shadow for depth */
+}
+
+.event-form-container h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Electrolize", sans-serif;
+}
+
+.event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #55555582;
+    border-radius: 4px;
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    color: #fff;
+    font-family: "Electrolize", sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #87CEEB;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background-color: #3a3a5b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Electrolize", sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #bad8d0;
+}
+
 .past-events {
-    margin-top: 20px;
+    margin: 0;
+    padding: 20px 0;
 }
 
 .past-events h1 {
@@ -101,5 +206,15 @@
 
     .events-image-item {
         height: 200px;
+    }
+
+    .row-bar6 {
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .past-events {
+        margin: 0;
+        padding: 10px 0;
     }
 }
