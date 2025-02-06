@@ -94,9 +94,40 @@
     opacity: 90%;
   }
   
-
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .next-arrow {
+    right: 15px;
+  }
+  
+  .prev-arrow {
+    left: 15px;
+  }
+  
+  .arrow-icon {
+    font-size: 2.5rem;
+  }
+  
   @media (max-width: 768px) {
-
     .image-wrapper,
     .image-wrapper-event,
     .image-wrapper-price,
@@ -108,9 +139,12 @@
     .hover-text {
       font-size: 20px;
     }
+  
+    .arrow-icon {
+      font-size: 1rem;
+    }
   }
   
-
   @media (max-width: 480px) {
     .image-wrapper,
     .image-wrapper-event,
