@@ -18,6 +18,11 @@ body {
     flex-grow: 1;
     padding: 150px 20px 50px;
     margin-top: 60px;
+    background-image: url('../Images/background_ppbycw.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 /* Title Container */

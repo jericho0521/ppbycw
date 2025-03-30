@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;  /* Enable smooth scrolling */
+    background-color: #1b1b32;
 }
 
 .events-container {
@@ -11,6 +12,8 @@ html {
     text-align: center;
     margin-top: 100px;
     scroll-margin-top: 100px;  /* Add margin for fixed header */
+    background-color: #1b1b32;
+    min-height: 100vh;
 }
 
 /* Button Styling */
@@ -61,9 +64,12 @@ html {
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
+.row-bar4 {
+    background-color: #1b1b32;
+}
+
 .row-bar5 {
-    margin: 0;
-    padding: 40px 0;
+    background-color: #1b1b32;
 }
 
 .row-bar6 {

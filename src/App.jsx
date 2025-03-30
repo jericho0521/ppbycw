@@ -1,27 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
-import Navbar from './Components/NavBar.jsx'; 
-import Footer from './Components/Footer.jsx'; 
-import Home from './Pages/Home.jsx';
-import Events from './Pages/Events.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer.jsx';
+import Home from './Pages/Home';
+import Events from './Pages/Events';
+import FAQ from './Pages/FAQ';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="App">
-
-        <Navbar />
+        <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Home page route */}
-          <Route path="/Events" element={<Events />} /> {/* Events page route */}
+          <Route path="/" element={<Home />} />
+          <Route path="/Events" element={<Events />} />
+          <Route path="/FAQ" element={<FAQ />} />
         </Routes>
-        
-        <Routes>
-
-        </Routes>
-        <Footer /> 
+        <Footer />
       </div>
     </Router>
   );

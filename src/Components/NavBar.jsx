@@ -58,6 +58,9 @@ const NavBar = () => {
             <Nav.Item as="li">
               <Nav.Link as={Link} to="/Events" onClick={() => setExpanded(false)}>EVENTS</Nav.Link>
             </Nav.Item>
+            <Nav.Item as="li">
+              <Nav.Link as={Link} to="/FAQ" onClick={() => setExpanded(false)}>FAQ</Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

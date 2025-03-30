@@ -5,7 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/ppbycw.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Project Play By CW - Malaysia's premier gaming hub featuring Racing Simulators, High-Performance PCs, and PS5 consoles. Join our vibrant gaming community, enjoy competitive rates, and experience top-tier gaming equipment. Book your session today!" />
+    <meta name="description" content="Project Play By CW - Sunway's premier gaming hub featuring Racing Simulators, High-Performance PCs, and PS5 consoles. Located in Subang Jaya, Malaysia. Join our vibrant gaming community, enjoy competitive rates, and experience top-tier gaming equipment. Book your session today!" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:title" content="Project Play By CW" />
@@ -16,26 +16,56 @@
     <meta property="og:type" content="website" />
     <meta name="google-site-verification" content="xg8VxYr2X-gQzwaQv3jprMGj8B62XAjbi_798_btLxE" />
 
+    <!-- Keywords for search engines -->
+    <meta name="keywords" content="racing simulator, gaming cafe, internet cafe, sunway, subang jaya, gaming hub, ps5 gaming, pc gaming, gaming center, malaysia gaming, racing games, gaming community, gaming events" />
+    
+    <!-- Location-specific meta tags -->
+    <meta name="geo.region" content="MY-SE" />
+    <meta name="geo.position" content="3.0738;101.5183" />
+    <meta name="ICBM" content="3.0738, 101.5183" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "InternetCafe", "GamingHub", "CyberCafe"],
+      "@type": "LocalBusiness",
       "name": "Project Play By CW",
       "image": "https://ppbycw.com/ProjectPlay_Logo.png",
-      "description": "Your premier gaming hub in Malaysia featuring Racing Simulators, High-Performance PCs and PS5 Consoles",
+      "description": "Sunway's premier gaming hub featuring Racing Simulators, High-Performance PCs, and PS5 consoles. Located in Subang Jaya, Malaysia.",
       "@id": "https://ppbycw.com",
       "url": "https://ppbycw.com",
       "telephone": "+601116281524",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "70, Jalan PJS 11/7",
-        "addressLocality": "Bandar Sunway",
-        "postalCode": "47500",
+        "streetAddress": "Sunway",
+        "addressLocality": "Subang Jaya",
         "addressRegion": "Selangor",
-        "addressCountry": "Malaysia"
+        "postalCode": "47500",
+        "addressCountry": "MY"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 3.0738,
+        "longitude": 101.5183
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "22:00"
+        }
+      ],
       "sameAs": [
-        "https://www.instagram.com/projectplaybycw/"
+        "https://www.facebook.com/ppbycw",
+        "https://www.instagram.com/ppbycw"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -43,21 +73,58 @@
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "PC Gaming",
+            "name": "Racing Simulator",
+            "description": "Professional racing simulator with Logitech G29",
             "url": "https://ppbycw.com/#services"
           },
           {
             "@type": "Offer",
-            "name": "Racing Simulator",
+            "name": "PC Gaming",
+            "description": "High-performance gaming PCs with latest titles",
             "url": "https://ppbycw.com/#services"
           },
           {
             "@type": "Offer",
             "name": "PlayStation 5",
+            "description": "Latest PS5 games and accessories",
             "url": "https://ppbycw.com/#services"
           }
         ]
       }
+    }
+    </script>
+
+    <!-- Additional Schema for FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What racing simulator equipment do you have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We feature the Logitech G29 racing wheel and pedal set for an immersive racing experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Project Play By CW located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are located in Sunway, Subang Jaya, Malaysia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What gaming services do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer Racing Simulators, High-Performance PC Gaming, and PlayStation 5 gaming services."
+          }
+        }
+      ]
     }
     </script>
 
