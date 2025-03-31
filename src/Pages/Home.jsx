@@ -221,56 +221,52 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about">
-        <div className="row-bar3">
-          <div href="#community-section" id="community-section" classname="title-container">
-
-            <div class="about-container">
-              <h1 class="about-heading">ABOUT US</h1>
-              <div class="about-content">
-                <div class="innertext">
-                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub. It's space where passions come alive, where everyone, friends and family could come together, have some fun and find a sense of belonging. It's not just about the games we play, but the connections we build.
-                </div>
-              </div>
+      <section id="about" className="about-section">
+          <div className="about-container">
+            <h1 className="about-heading">ABOUT US</h1>
+            <div className="about-content">
+              <p>
+                Project Play By CW founded in 2024. Project Play is more than just a gaming hub. 
+                It's space where passions come alive, where everyone, friends and family could come 
+                together, have some fun and find a sense of belonging. It's not just about the games 
+                we play, but the connections we build.
+              </p>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Community Section */}
-      <section id="community">
-        <div className="community-section">
-          <h1><b>OUR COMMUNITY</b></h1>
-
-          <div className="about-container">
-            <div className="about-content">
-              <div className="innertext">
-                <p>Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
-                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared, 
-                  your victories celebrated, and where every moment spent here feels like a part of home. 
-                  At Project Play By CW, you're never just a player, you're a valued member of a family. Welcome to a place where you belong.</p>
-              </div>
-            </div>
+      <section id="community" className="community-section">
+        <h1>OUR COMMUNITY</h1>
+        <div className="community-content">
+          <div className="community-text">
+            <p>
+              Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
+              Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared, 
+              your victories celebrated, and where every moment spent here feels like a part of home. 
+              At Project Play By CW, you're never just a player, you're a valued member of a family. 
+              Welcome to a place where you belong.
+            </p>
           </div>
 
           <div className="community-images">
             <div className="image-wrapper">
-              <img src={store} alt="front store"/>
+              <img src={store} alt="Store Front"/>
             </div>
             <div className="image-wrapper">
-              <img src={com1} alt="person1"/>
+              <img src={com1} alt="Community Member 1"/>
             </div>
             <div className="image-wrapper">
-              <img src={com2} alt="person2"/>
+              <img src={com2} alt="Community Member 2"/>
             </div>
             <div className="image-wrapper">
-              <img src={com4} alt="person3"/>
+              <img src={com4} alt="Community Member 3"/>
             </div>
             <div className="image-wrapper">
-              <img src={com5} alt="person4"/>
+              <img src={com5} alt="Community Member 4"/>
             </div>
             <div className="image-wrapper">
-              <img src={com6} alt="person5"/>
+              <img src={com6} alt="Community Member 5"/>
             </div>
           </div>
         </div>

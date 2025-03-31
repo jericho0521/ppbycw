@@ -53,7 +53,7 @@ const NavBar = () => {
               <Nav.Link onClick={() => handleNavClick('/', 'pricing-section')}>PRICING</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link onClick={() => handleNavClick('/', 'community-section')}>ABOUT</Nav.Link>
+              <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>ABOUT</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
               <Nav.Link as={Link} to="/Events" onClick={() => setExpanded(false)}>EVENTS</Nav.Link>
