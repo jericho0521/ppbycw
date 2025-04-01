@@ -12,7 +12,7 @@ function FAQ() {
         },
         {
             question: "Where is Project Play By CW located?",
-            answer: "We are located in Sunway, Subang Jaya, Malaysia. Our gaming hub is easily accessible and offers ample parking space for our customers.",
+            answer: "We are located in Bandar Sunway, Subang Jaya, Malaysia. Our gaming hub is easily accessible and offers ample parking space for our customers.",
             icon: "fa-solid fa-location-dot"
         },
         {
@@ -52,34 +52,44 @@ function FAQ() {
     };
 
     return (
-        <div className="faq-container">
-            <div className="faq-header">
-                <h1>Frequently Asked Questions</h1>
-                <p>Find answers to common questions about our gaming services</p>
-            </div>
-            
-            <div className="faq-content">
-                {faqs.map((faq, index) => (
-                    <div 
-                        key={index} 
-                        className={`faq-item ${activeIndex === index ? 'active' : ''}`}
-                        onClick={() => toggleFAQ(index)}
-                    >
-                        <div className="faq-question">
-                            <span className="faq-icon">
-                                <i className={faq.icon}></i>
-                            </span>
-                            <h3>{faq.question}</h3>
-                            <span className="arrow-icon">
-                                <i className={`fa-solid ${activeIndex === index ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-                            </span>
+        <div className="main-content">
+            <section id="faq">
+                <div className="row-bar2">
+                    <div className="section-container">
+                        <h1><b>Frequently Asked Questions</b></h1>
+                        <div className="content-category">
+                            <div className="content-details">
+                                <p>Find answers to common questions about our gaming services</p>
+                            </div>
                         </div>
-                        <div className={`faq-answer ${activeIndex === index ? 'show' : ''}`}>
-                            <p>{faq.answer}</p>
+
+                        <div className="content-category">
+                            <div className="content-details faq-content">
+                                {faqs.map((faq, index) => (
+                                    <div 
+                                        key={index} 
+                                        className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+                                        onClick={() => toggleFAQ(index)}
+                                    >
+                                        <div className="faq-question">
+                                            <span className="faq-icon">
+                                                <i className={faq.icon}></i>
+                                            </span>
+                                            <h3>{faq.question}</h3>
+                                            <span className="arrow-icon">
+                                                <i className={`fa-solid ${activeIndex === index ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                                            </span>
+                                        </div>
+                                        <div className={`faq-answer ${activeIndex === index ? 'show' : ''}`}>
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                ))}
-            </div>
+                </div>
+            </section>
         </div>
     );
 }

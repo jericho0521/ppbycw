@@ -77,12 +77,42 @@
     border-radius: 4px;
     box-shadow: 0 8px 32px rgba(135, 206, 235, 0.15);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 32px rgba(135, 206, 235, 0.3);
     background: rgba(41, 41, 79, 0.7);
+}
+
+.feature-item i {
+    font-size: 2.5em;
+    color: #bad8d0;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+}
+
+.feature-item:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3em;
+    color: #bad8d0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.feature-item p {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 1em;
+    letter-spacing: 1px;
 }
 
 /* Story Section */
@@ -128,12 +158,30 @@
     border-radius: 4px;
     box-shadow: 0 8px 32px rgba(135, 206, 235, 0.15);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .value-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 32px rgba(135, 206, 235, 0.3);
     background: rgba(41, 41, 79, 0.7);
+}
+
+.value-item h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3em;
+    color: #bad8d0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.value-item p {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 1em;
+    letter-spacing: 1px;
 }
 
 /* Common Styles */
@@ -160,6 +208,34 @@
     line-height: 1.6;
     opacity: 0.9;
     font-size: 1.1em;
+}
+
+/* Content Styles */
+.content-details {
+    padding: 20px;
+    background: #1b2332;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(135, 206, 235, 0.15);
+    margin-bottom: 30px;
+}
+
+.content-details p {
+    font-family: "Electrolize", sans-serif;
+    color: #fff;
+    line-height: 1.8;
+    font-size: 1em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.section-container h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #bad8d0;
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 /* Mobile Styles */
@@ -210,5 +286,16 @@
 
     .about-container p {
         font-size: 1em;
+    }
+
+    .section-container h1 {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+
+    .feature-item h3,
+    .value-item h3 {
+        font-size: 1.2em;
+        letter-spacing: 1.5px;
     }
 }
