@@ -108,7 +108,7 @@
 }
 
 .feature-item p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Electrolize", sans-serif;
     color: #fff;
     line-height: 1.6;
     font-size: 1em;
@@ -177,7 +177,7 @@
 }
 
 .value-item p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Electrolize", sans-serif;
     color: #fff;
     line-height: 1.6;
     font-size: 1em;
@@ -297,5 +297,46 @@
     .value-item h3 {
         font-size: 1.2em;
         letter-spacing: 1.5px;
+    }
+}
+
+/* General paragraph styles */
+p {
+    font-family: "Electrolize", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.about-section p,
+.features-section p,
+.story-section p,
+.values-section p {
+    font-family: "Electrolize", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.feature-item p,
+.value-item p {
+    font-family: "Electrolize", sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 15px;
+        letter-spacing: 0.7px;
     }
 }
