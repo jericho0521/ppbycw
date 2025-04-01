@@ -42,7 +42,7 @@ function Home() {
             <h4 className="montserrat-bold">RESERVATION</h4>
           </a>
           <br></br>
-          <h6>*APPLICABLE ONLY FOR PLAYSTATION 5 & RACING SIMULATOR</h6>
+          <h4>*APPLICABLE ONLY FOR PLAYSTATION 5 & RACING SIMULATOR</h4>
         </div>
       </section>
 
@@ -64,11 +64,9 @@ function Home() {
                 className="overlay-text">
                 <div className="initial-text">Racing Simulator</div>
                 <div className="hover-text">
-                  <h1>SPECIFICATIONS</h1>
-                  <br></br>
-                  <p>Playstation 5
-                    <br></br>
-                    Logitech G29</p>
+                  <h1>SPECS</h1>
+                  <p>Playstation 5</p>
+                  <p>Logitech G29</p>
                 </div>
               </div>
             </div>
@@ -80,15 +78,11 @@ function Home() {
                 className="overlay-text">
                 <div className="initial-text">PC Gaming</div>
                 <div className="hover-text">
-                  <h1>SPECIFICATIONS</h1>
-
-                  <p>
-                    <dt>AMD RYZEN 5 5500</dt>
-                    <dt>MSI GEFORCE RTX 3070</dt>
-                    <dt>DDR4 3200MHZ 16GB</dt>
-                    <dt>27" 165Hz GAMING MONITOR</dt>
-                  </p>
-
+                  <h1>SPECS</h1>
+                  <p>AMD RYZEN 5 5500</p>
+                  <p>MSI GEFORCE RTX 3070</p>
+                  <p>DDR4 3200MHZ 16GB</p>
+                  <p>Samsung27" 165Hz</p>
                 </div>
               </div>
             </div>
@@ -100,16 +94,12 @@ function Home() {
                 className="overlay-text">
                 <div className="initial-text">Playstation 5</div>
                 <div className="hover-text">
-
                   <h1>GAMES</h1>
-                  <p>
-                    <dt>FC 25</dt>
-                    <dt>UFC 5</dt>
-                    <dt>Overcooked</dt>
-                    <dt>NBA 2K24</dt>
-                    <dt>Tekken 8</dt>
-                  </p>
-
+                  <p>FC 25</p>
+                  <p>UFC 5</p>
+                  <p>Overcooked</p>
+                  <p>NBA 2K24</p>
+                  <p>Tekken 8</p>
                 </div>
               </div>
             </div>
@@ -221,52 +211,51 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="about-section">
-          <div className="about-container">
-            <h1 className="about-heading">ABOUT US</h1>
-            <div className="about-content">
-              <p>
-                Project Play By CW founded in 2024. Project Play is more than just a gaming hub. 
-                It's space where passions come alive, where everyone, friends and family could come 
-                together, have some fun and find a sense of belonging. It's not just about the games 
-                we play, but the connections we build.
-              </p>
+      <section id="about">
+        <div className="row-bar2">
+          <div className="section-container">
+            <h1><b>ABOUT US</b></h1>
+            <div className="content-category">
+              <div className="content-details">
+                <p>
+                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub. 
+                  It's space where passions come alive, where everyone, friends and family could come 
+                  together, have some fun and find a sense of belonging. It's not just about the games 
+                  we play, but the connections we build.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
       </section>
 
       {/* Community Section */}
-      <section id="community" className="community-section">
-        <h1>OUR COMMUNITY</h1>
-        <div className="community-content">
-          <div className="community-text">
-            <p>
-              Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
-              Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared, 
-              your victories celebrated, and where every moment spent here feels like a part of home. 
-              At Project Play By CW, you're never just a player, you're a valued member of a family. 
-              Welcome to a place where you belong.
-            </p>
-          </div>
-
-          <div className="community-images">
-            <div className="image-wrapper">
-              <img src={store} alt="Store Front"/>
+      <section id="community">
+        <div className="row-bar2">
+          <div className="section-container">
+            <h1><b>OUR COMMUNITY</b></h1>
+            <div className="content-category">
+              <div className="content-details">
+                <p>
+                  Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
+                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared, 
+                  your victories celebrated, and where every moment spent here feels like a part of home. 
+                  At Project Play By CW, you're never just a player, you're a valued member of a family. 
+                  Welcome to a place where you belong.
+                </p>
+              </div>
             </div>
-            <div className="image-wrapper">
-              <img src={com1} alt="Community Member 1"/>
-            </div>
-            <div className="image-wrapper">
-              <img src={com2} alt="Community Member 2"/>
-            </div>
-            <div className="image-wrapper">
-              <img src={com4} alt="Community Member 3"/>
-            </div>
-            <div className="image-wrapper">
-              <img src={com5} alt="Community Member 4"/>
-            </div>
-            <div className="image-wrapper">
-              <img src={com6} alt="Community Member 5"/>
+            <div className="content-category">
+              <div className="gallery-container">
+                <div className="gallery-grid">
+                  <img src={store} alt="Store Front"/>
+                  <img src={com1} alt="Community Member 1"/>
+                  <img src={com2} alt="Community Member 2"/>
+                  <img src={com4} alt="Community Member 3"/>
+                  <img src={com5} alt="Community Member 4"/>
+                  <img src={com6} alt="Community Member 5"/>
+                </div>
+              </div>
             </div>
           </div>
         </div>
