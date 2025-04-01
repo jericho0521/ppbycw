@@ -138,7 +138,8 @@ body {
 .member-details {
     font-family: "Electrolize", sans-serif;
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #1b2332d7;
+    box-shadow: 0 0 10px rgba(188, 186, 216, 0.207);
     padding: 20px;
     border-radius: 4px;
     width: 500px;
