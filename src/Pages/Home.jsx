@@ -78,7 +78,7 @@ function Home() {
                 className="overlay-text">
                 <div className="initial-text">PC Gaming</div>
                 <div className="hover-text">
-                  <h1>SPECS</h1>
+                  <h1><b>SPECS</b></h1>
                   <p>AMD RYZEN 5 5500</p>
                   <p>MSI GEFORCE RTX 3070</p>
                   <p>DDR4 3200MHZ 16GB</p>

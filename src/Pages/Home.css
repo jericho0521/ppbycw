@@ -635,6 +635,7 @@ body {
 
 }
 
+
 .initial-text {
     font-family: "Montserrat", sans-serif;
     font-size: 30px;
@@ -658,24 +659,36 @@ body {
     transform: translateY(-20px);
     transition: all 0.3s ease;
     padding-top: 10px;
+    width: 180%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .hover-text h1 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
     color: #bad8d0;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(186, 216, 208, 0.5);
+    letter-spacing: 1px;
 }
 
 .hover-text p {
-    font-family: "Electrolize", sans-serif;
-    font-size: 19px;
-    line-height: 1.4;
-    margin: 0 0 6px 0;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 20px;
+    line-height: 1.3;
     color: #ffffff;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .hover-text dt {
@@ -691,7 +704,7 @@ body {
 
 .image-wrapper:hover .hover-text {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
 }
 
 /* Mobile Styles for Services */
