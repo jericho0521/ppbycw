@@ -12,7 +12,7 @@ function FAQ() {
         },
         {
             question: "Where is Project Play By CW located?",
-            answer: "We are located in Bandar Sunway, Subang Jaya, Malaysia. Our gaming hub is easily accessible and offers ample parking space for our customers.",
+            answer: "We are located in Bandar Sunway, Subang Jaya, Malaysia. Our gaming hub is easily accessible via public transportation, with BRT and LRT stations nearby.",
             icon: "fa-solid fa-location-dot"
         },
         {
