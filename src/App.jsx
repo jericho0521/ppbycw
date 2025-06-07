@@ -14,7 +14,7 @@ import './App.css';
 // Component to handle canonical URLs
 const CanonicalURL = () => {
   const location = useLocation();
-  const baseUrl = 'https://ppbycw.com'; 
+  const baseUrl = 'https://ppbycw.com'; // Your actual domain
   const canonicalUrl = `${baseUrl}${location.pathname}`;
   
   return (

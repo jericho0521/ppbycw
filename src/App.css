@@ -13,7 +13,7 @@ body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
-  background: url('./Images/webp/background_ppbycw.webp') center center fixed;
+  background: url('./Images/background_ppbycw.png') center center fixed;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -99,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url('./Images/webp/background_ppbycw.webp');
+  background-image: url('./Images/background_ppbycw.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

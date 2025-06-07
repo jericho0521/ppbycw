@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Events.css'; 
 import { mc1, mc2, mc3, mc4, mc5, mc6 } from '../Images'; 
-import OptimizedImage from '../Components/OptimizedImage';
 
 // Image Row Component
 const ImageRow = ({ images }) => {
@@ -24,8 +23,6 @@ function Events() {
         eventType: '',
         message: ''
     });
-
-    const eventImages = [mc1, mc2, mc3, mc4, mc5, mc6];
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -63,6 +60,7 @@ function Events() {
         });
     };
 
+    const images = [mc1, mc2, mc3, mc4, mc5, mc6];
     return (
         <main className="events-container">
             <section className="event-details" style={{marginTop: '-100px'}}>
@@ -91,7 +89,7 @@ function Events() {
                             </ul>
                         </p>
                     </div>
-                    <ImageRow images={eventImages} />
+                    <ImageRow images={images} />
                 </div>
             </div>
 
