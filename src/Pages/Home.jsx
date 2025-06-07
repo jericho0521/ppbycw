@@ -1,31 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { logo, image1, image2, image3, store, com1, com2, com4, com5, com6 } from '../Images';
 import '../Assets/Font.css'; //Font
-import '../Assets/image.css'; //Images
+// import '../Assets/image.css'; 
 import '../Assets/row.css'; // Row
 import '../Assets/social.css'; //Social Icons
 import './Home.css'; //Home
 import '../App.css'; //App
 import './About.css';
+import OptimizedImage from '../Components/OptimizedImage';
 
 
-// IMAGES
-import { 
-  logo, 
-  image1, 
-  image2, 
-  image3, 
-  // price, 
-  // member, 
-  com1, 
-  com2, 
-  // com3, 
-  com4, 
-  com5, 
-  com6, 
-  store,
-  // newprice
-} from '../Images';
-// import { BiFontSize } from 'react-icons/bi';
 
 
 
@@ -36,7 +21,7 @@ function Home() {
       <section id="reservation">
         <div className="title-container">
           <div className="logo-image">
-            <img src={logo} className="image-item" alt="Project Play Logo" />
+            <OptimizedImage src={logo} className="image-item" alt="Project Play Logo" />
           </div>
           <a href="https://wa.me/601116281524" target="_blank" rel="noopener noreferrer" className="button">
             <h4 className="montserrat-bold">RESERVATION</h4>
@@ -59,7 +44,7 @@ function Home() {
           <div className="images-container">
             {/* Image 1 */}
             <div className="image-wrapper">
-              <img src={image1} alt="Racing Simulator" />
+              <OptimizedImage src={image1} alt="Racing Simulator" />
               <div 
                 className="overlay-text">
                 <div className="initial-text">Racing Simulator</div>
@@ -73,7 +58,7 @@ function Home() {
 
             {/* Image 2 */}
             <div className="image-wrapper">
-              <img src={image2} alt="PC Gaming" />
+              <OptimizedImage src={image2} alt="PC Gaming" />
               <div 
                 className="overlay-text">
                 <div className="initial-text">PC Gaming</div>
@@ -89,7 +74,7 @@ function Home() {
 
             {/* Image 3 */}
             <div className="image-wrapper">
-              <img src={image3} alt="Playstation 5" />
+              <OptimizedImage src={image3} alt="Playstation 5" />
               <div 
                 className="overlay-text">
                 <div className="initial-text">Playstation 5</div>
@@ -248,12 +233,12 @@ function Home() {
             <div className="content-category">
               <div className="gallery-container">
                 <div className="gallery-grid">
-                  <img src={store} alt="Store Front"/>
-                  <img src={com1} alt="Community Member 1"/>
-                  <img src={com2} alt="Community Member 2"/>
-                  <img src={com4} alt="Community Member 3"/>
-                  <img src={com5} alt="Community Member 4"/>
-                  <img src={com6} alt="Community Member 5"/>
+                  <OptimizedImage src={store} alt="Store Front"/>
+                  <OptimizedImage src={com1} alt="Community Member 1"/>
+                  <OptimizedImage src={com2} alt="Community Member 2"/>
+                  <OptimizedImage src={com4} alt="Community Member 3"/>
+                  <OptimizedImage src={com5} alt="Community Member 4"/>
+                  <OptimizedImage src={com6} alt="Community Member 5"/>
                 </div>
               </div>
             </div>

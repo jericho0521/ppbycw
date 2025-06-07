@@ -14,7 +14,7 @@ import './App.css';
 // Component to handle canonical URLs
 const CanonicalURL = () => {
   const location = useLocation();
-  const baseUrl = 'https://ppbycw.com'; // Your actual domain
+  const baseUrl = 'https://ppbycw.com'; 
   const canonicalUrl = `${baseUrl}${location.pathname}`;
   
   return (
@@ -27,19 +27,19 @@ const CanonicalURL = () => {
 function App() {
   return (
     <HelmetProvider>
-      <Router>
-        <div className="App">
+    <Router>
+      <div className="App">
           <CanonicalURL />
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
     </HelmetProvider>
   );
 }
