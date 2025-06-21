@@ -48,7 +48,7 @@ body {
     flex-grow: 1;
     padding: 150px 20px 50px;
     margin-top: 0;
-    background-image: url('../Images/background_ppbycw.png');
+    background-image: url('../Images/background_ppbycw.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -59,6 +59,7 @@ body {
 
 .title-container h4 {
     font-family: "Electrolize", sans-serif;
+    text-shadow: 0 0 10px rgba(186, 216, 208, 0.5);
     color: #fff;
     letter-spacing: 1px;
     margin: 10px 0;
@@ -807,6 +808,7 @@ body {
 }
 
 .hover-text h1 {
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
@@ -958,4 +960,117 @@ p {
         font-size: 15px;
         letter-spacing: 0.7px;
     }
+}
+
+/* Promo Section Styles */
+.promo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promo-section {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.promo-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #bad8d0;
+    text-shadow: 
+        0 0 2px #87CEEB,
+        0 0 7px #87CEEB,
+        0 0 3px #87CEEB;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Promo Image Styles */
+.promo-section img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    display: block;
+}
+
+/* Mobile responsive styles for promo section */
+@media (max-width: 768px) {
+    .promo-box {
+        padding: 30px 15px;
+    }
+    
+    .promo-section h2 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+    
+    .promo-section img {
+        max-width: 80%;
+        margin: 15px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-box {
+        padding: 20px 10px;
+    }
+    
+    .promo-section h2 {
+        font-size: 1.5em;
+        letter-spacing: 0.5px;
+    }
+    
+    .promo-section img {
+        max-width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 380px) {
+    .promo-section img {
+        max-width: 95%;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+/* Services Section Styles */
+#services .row-bar h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #bad8d0;
+    text-shadow: 
+        0 0 2px #87CEEB,
+        0 0 7px #87CEEB,
+        0 0 3px #87CEEB;
+}
+
+/* Pricing Section Styles */
+#pricing .pricing-section h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #bad8d0;
+    text-shadow: 
+        0 0 2px #87CEEB,
+        0 0 7px #87CEEB,
+        0 0 3px #87CEEB;
 }

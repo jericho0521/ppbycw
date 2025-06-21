@@ -14,18 +14,16 @@ import {
   image1, 
   image2, 
   image3, 
-  // price, 
-  // member, 
   com1, 
   com2, 
-  // com3, 
   com4, 
   com5, 
   com6, 
   store,
-  // newprice
+  rnr,
+
 } from '../Images';
-// import { BiFontSize } from 'react-icons/bi';
+
 
 
 
@@ -64,7 +62,7 @@ function Home() {
                 className="overlay-text">
                 <div className="initial-text">Racing Simulator</div>
                 <div className="hover-text">
-                  <h1>SPECS</h1>
+                  <h1><b>SPECS</b></h1>
                   <p>Playstation 5</p>
                   <p>Logitech G29</p>
                 </div>
@@ -94,7 +92,7 @@ function Home() {
                 className="overlay-text">
                 <div className="initial-text">Playstation 5</div>
                 <div className="hover-text">
-                  <h1>GAMES</h1>
+                  <h1><b>GAMES</b></h1>
                   <p>FC 25</p>
                   <p>UFC 5</p>
                   <p>Overcooked</p>
@@ -180,6 +178,8 @@ function Home() {
 
             </div>
 
+            
+
             {/* Membership Section */}
             <div className="member-box">
               <div className="pricing-section">
@@ -206,6 +206,15 @@ function Home() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      <section id="promotion">
+        <div className="promo-box">
+          <div className="promo-section">
+            <h2>PROMOTIONS</h2>
+            <img src={rnr} alt="Promo 1" />
           </div>
         </div>
       </section>
