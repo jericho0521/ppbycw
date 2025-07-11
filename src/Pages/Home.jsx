@@ -188,10 +188,11 @@ function Home() {
                   <h2>JOIN OUR MEMBERSHIP NOW</h2>
                   <div className="member-details">
                     <p>Registration fee of RM50
-                      <br />Enjoy member exclusive rates and packages
-                      <br />First timers will enjoy a bonus credit of RM20</p>
+                      <br />Enjoy member exclusive rates and packages</p>
                   </div>
                 </div>
+
+
 
                 <div className="pricing-category">
                   <h2>SPECIAL RATES</h2>
@@ -202,8 +203,29 @@ function Home() {
                       <br />bonus credit of RM15</span></p>
                   </div>
                 </div>
-
+                
+                {/* Birthday Benefits Section */}
+                <div className="pricing-category">
+                  <h2 className="birthday-benefits-title">BIRTHDAY BENEFITS</h2>
+                  <div className="birthday-benefits-details">
+                    <div className="birthday-benefit">
+                      <span>FREE 1 HOUR</span>
+                      PLAYSTATION 5
+                    </div>
+                    <div className="birthday-or">or</div>
+                    <div className="birthday-benefit">
+                      <span>FREE 2 HOUR</span>
+                      RACING SIMULATOR
+                    </div>
+                    <div className="birthday-or">or</div>
+                    <div className="birthday-benefit">
+                      <span>FREE 3 HOUR</span>
+                      PC GAMING
+                    </div>
+                  </div>
+                </div>
               </div>
+              
             </div>
 
           </div>
