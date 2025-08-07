@@ -1,21 +1,21 @@
-import logo from './Project Play_Logo.png';
-import image1 from './rs_ppbycw.png';
-import image2 from './pc_ppbycw.png';
-import image3 from './ps5new.png';
-import com1 from './community1.png';
-import com2 from './community2.png';
-import com3 from './community3.png';
-import com4 from './community4.png';
-import com5 from './community5.png';
-import com6 from './community6.png';
-import store from './store.png';
-import mc1 from './mc1.png';
-import mc2 from './monash2.png';
-import mc3 from './monash3.png';
-import mc4 from './monash4.png';
-import mc5 from './monash5.png';
-import mc6 from './monash6.png';
-import rnr from './rnr.png';
+import logo from './optimized/Project Play_Logo_optimized.png';
+import image1 from './optimized/rs_ppbycw_optimized.png';
+import image2 from './optimized/pc_ppbycw_optimized.png';
+import image3 from './optimized/ps5new_optimized.png';
+import com1 from './optimized/community1_optimized.png';
+import com2 from './optimized/community2_optimized.png';
+
+import com4 from './optimized/community4_optimized.png';
+import com5 from './optimized/community5_optimized.png';
+import com6 from './optimized/community6_optimized.png';
+import store from './optimized/store_optimized.png';
+import mc1 from './optimized/mc1_optimized.png';
+import mc2 from './optimized/monash2_optimized.png';
+import mc3 from './optimized/monash3_optimized.png';
+import mc4 from './optimized/monash4_optimized.png';
+import mc5 from './optimized/monash5_optimized.png';
+import mc6 from './optimized/monash6_optimized.png';
+import rnr from './optimized/rnr_optimized.png';
 
 export {
   logo,
@@ -24,7 +24,6 @@ export {
   image3,
   com1,
   com2,
-  com3,
   com4,
   com5,
   com6,
