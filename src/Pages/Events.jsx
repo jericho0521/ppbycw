@@ -1,19 +1,8 @@
 import React, { useState } from 'react';
 import './Events.css'; 
-import { mc1, mc2, mc3, mc4, mc5, mc6 } from '../Images'; 
+import EventTemplate from '../Components/EventTemplate';
+import { getEventsInOrder } from '../Data/eventsData'; 
 
-// Image Row Component
-const ImageRow = ({ images }) => {
-    return (
-        <div className="events-image-grid">
-            {images.map((src, index) => (
-                <div key={index} className="events-image-wrapper">
-                    <img src={src} alt={`Event ${index + 1}`} className="events-image-item" />
-                </div>
-            ))}
-        </div>
-    );
-};
 
 function Events() {
     const [formData, setFormData] = useState({
@@ -33,7 +22,7 @@ function Events() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    access_key: '46db8645-b415-4df3-98dc-0c7800213199',
+                    access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY,
                     ...formData
                 })
             });
@@ -60,7 +49,8 @@ function Events() {
         });
     };
 
-    const images = [mc1, mc2, mc3, mc4, mc5, mc6];
+    // Get all events in order
+    const events = getEventsInOrder();
     return (
         <main className="events-container">
             <section className="event-details" style={{marginTop: '-100px'}}>
@@ -75,23 +65,18 @@ function Events() {
                 </div>
             </section>
 
-            <div className="row-bar5">
-                <div className="past-events">
-                    <h1>PAST EVENTS</h1>
-                    <h3>Monash Cup 2024</h3>
-                    <div className="innertext">
-                        <p>
-                            Highlights: Monash University hosted their Monash Cup 2024 at Project Play. <br />Monash Cup was held for 3 days and had teams competing in different games including:
-                            <ul>
-                                <br />Counter Strike 2
-                                <br />Valorant
-                                <br />League of Legends
-                            </ul>
-                        </p>
-                    </div>
-                    <ImageRow images={images} />
-                </div>
-            </div>
+            {/* Render all events using the template */}
+            {events.map((event) => (
+                <EventTemplate
+                    key={event.id}
+                    title={event.title}
+                    description={event.description}
+                    additionalInfo={event.additionalInfo}
+                    images={event.images}
+                    showTitle={event.showTitle}
+                    className={event.className}
+                />
+            ))}
 
             <div className="row-bar6">
                 <div className="event-form-section" id="event-form-section">

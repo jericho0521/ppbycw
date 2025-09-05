@@ -1,21 +1,29 @@
-import logo from './optimized/Project Play_Logo_optimized.png';
+import logo from './optimized/pp_logo.png';
 import image1 from './optimized/rs_ppbycw_optimized.png';
 import image2 from './optimized/pc_ppbycw_optimized.png';
 import image3 from './optimized/ps5new_optimized.png';
-import com1 from './optimized/community1_optimized.png';
-import com2 from './optimized/community2_optimized.png';
 
-import com4 from './optimized/community4_optimized.png';
-import com5 from './optimized/community5_optimized.png';
-import com6 from './optimized/community6_optimized.png';
-import store from './optimized/store_optimized.png';
-import mc1 from './optimized/mc1_optimized.png';
-import mc2 from './optimized/monash2_optimized.png';
-import mc3 from './optimized/monash3_optimized.png';
-import mc4 from './optimized/monash4_optimized.png';
-import mc5 from './optimized/monash5_optimized.png';
-import mc6 from './optimized/monash6_optimized.png';
-import rnr from './optimized/rnr_optimized.png';
+import com1 from './optimized/community_1.png';
+import com2 from './optimized/community_2.png';
+import com4 from './optimized/community_4.png';
+import com5 from './optimized/community_5.png';
+import com6 from './optimized/community_6.png';
+
+import store from './optimized/store.png';
+import rnr from './optimized/rnr.png';
+
+import mc1 from './optimized/mc1.png';
+import mc2 from './optimized/monash_2.png';
+import mc3 from './optimized/monash_3.png';
+import mc4 from './optimized/monash_4.png';
+import mc5 from './optimized/monash_5.png';
+import mc6 from './optimized/monash_6.png';
+
+import terminull1 from './optimized/terminull_1.png';
+import terminull2 from './optimized/terminull_2.png';
+import terminull3 from './optimized/terminull_3.png';
+import terminull4 from './optimized/terminull_4.png';
+import terminull5 from './optimized/terminull_5.png';
 
 export {
   logo,
@@ -34,5 +42,10 @@ export {
   mc4,
   mc5,
   mc6,
-  rnr
+  rnr,
+  terminull1,
+  terminull2,
+  terminull3,
+  terminull4,
+  terminull5
 };
