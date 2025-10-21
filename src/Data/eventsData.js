@@ -1,17 +1,26 @@
 // Import all event images
 import { 
   terminull1, terminull2, terminull3, terminull4, terminull5,
-  mc1, mc2, mc3, mc4, mc5, mc6 
+  mc1, mc2, mc3, mc4, mc5, mc6,
+  m25_2, m25_3, m25_4, m25_5
 } from '../Images';
 
 
 export const eventsData = [
   {
+    id: 'monash-cup-2025',
+    title: 'Monash Cup 2025',
+    description: 'Highlights: Monash University hosted their Monash Cup 2025 at Project Play. This year\'s tournament featured teams competing in Valorant and Counter Strike 2.',
+    images: [m25_2, m25_3, m25_4, m25_5], // New Monash Cup 2025 images
+    showTitle: true, // Show "PAST EVENTS" header for first event
+    className: 'row-bar5'
+  },
+  {
     id: 'terminull-brigade-2025',
     title: 'Terminull Brigade Event 2025',
     description: 'Highlights: Project Play hosted the Terminull Brigade Event 2025. This event included time run for Terminull Brigade where players from Sunway University and Monash University compete with other players to beat the best time.',
     images: [terminull1, terminull2, terminull3, terminull4, terminull5],
-    showTitle: true, // Show "PAST EVENTS" header for first event
+    showTitle: false, // Don't show "PAST EVENTS" header for subsequent events
     className: 'row-bar5'
   },
   {

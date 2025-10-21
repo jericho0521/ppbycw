@@ -25,6 +25,11 @@ import terminull3 from './optimized/terminull_3.png';
 import terminull4 from './optimized/terminull_4.png';
 import terminull5 from './optimized/terminull_5.png';
 
+import m25_2 from './optimized/m25_2_optimized.png';
+import m25_3 from './optimized/m25_3_optimized.png';
+import m25_4 from './optimized/m25_4_optimized.png';
+import m25_5 from './optimized/m25_5_optimized.png';
+
 export {
   logo,
   image1,
@@ -47,5 +52,9 @@ export {
   terminull2,
   terminull3,
   terminull4,
-  terminull5
+  terminull5,
+  m25_2,
+  m25_3,
+  m25_4,
+  m25_5
 };
