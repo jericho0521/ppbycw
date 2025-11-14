@@ -150,7 +150,11 @@ function Home() {
                 <h2>PS5</h2>
                 <div className="pricing-details">
                   <p>
-                    <span>Standard Rate</span>
+                    <span>Non-Member</span>
+                    <span className="price">RM30/HR</span>
+                  </p>
+                  <p>
+                    <span>Member</span>
                     <span className="price">RM25/HR</span>
                   </p>
                 </div>
