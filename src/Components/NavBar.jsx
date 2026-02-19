@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './NavBar.css';
@@ -8,6 +8,13 @@ import '../App.css';
 const NavBar = () => {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleNavClick = (path, sectionId) => {
     if (window.location.pathname !== '/') {
@@ -23,7 +30,7 @@ const NavBar = () => {
     <Navbar 
       bg="darkblue" 
       variant="dark" 
-      className="nav-bar" 
+      className={`nav-bar${scrolled ? ' scrolled' : ''}`}
       expand="lg"
       expanded={expanded}
       onToggle={(expanded) => setExpanded(expanded)}

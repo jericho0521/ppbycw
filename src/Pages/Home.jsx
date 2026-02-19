@@ -35,11 +35,43 @@ function Home() {
           <div className="logo-image">
             <img src={logo} className="image-item" alt="Project Play Logo" />
           </div>
+          <p className="hero-tagline">
+            {"WHERE GAMERS BELONG, PLAY TODAY".split('').map((char, i) => (
+              <span key={i} className="tagline-char" style={{ animationDelay: `${0.8 + i * 0.06}s` }}>
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
+          </p>
           <a href="https://wa.me/601116281524" target="_blank" rel="noopener noreferrer" className="button">
             <h4 className="montserrat-bold">RESERVATION</h4>
           </a>
           <br></br>
           <h4>*APPLICABLE ONLY FOR PLAYSTATION 5 & RACING SIMULATOR</h4>
+        </div>
+      </section>
+
+      {/* Stats Strip */}
+      <section id="stats">
+        <div className="stats-strip">
+          <div className="stat-item">
+            <span className="stat-number">2024</span>
+            <span className="stat-label">FOUNDED</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-number">3</span>
+            <span className="stat-label">GAMING RIGS</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-number">14<span className="stat-unit">HRS</span></span>
+            <span className="stat-label">OPEN DAILY</span>
+          </div>
+          <div className="stat-divider" />
+          <div className="stat-item">
+            <span className="stat-number">7</span>
+            <span className="stat-label">DAYS A WEEK</span>
+          </div>
         </div>
       </section>
 

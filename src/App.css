@@ -173,3 +173,15 @@ body {
   min-height: 100vh;
   width: 100%;
 }
+
+/* ─── Section Heading Accent Line ───────────────────────────── */
+.section-container h1::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #87CEEB, #bad8d0);
+  box-shadow: 0 0 10px #87CEEB, 0 0 20px rgba(135, 206, 235, 0.4);
+  margin: 0 auto 16px;
+  border-radius: 2px;
+}

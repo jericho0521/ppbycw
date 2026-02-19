@@ -59,6 +59,16 @@ h1 {
     color: #87CEEB;
 }
 
+/* Scroll-shrink state */
+.nav-bar.scrolled {
+    height: 48px;
+    box-shadow: 0 4px 24px rgba(135, 206, 235, 0.12);
+}
+
+.nav-bar.scrolled .navbar-brand {
+    font-size: 1.1em;
+}
+
 /* Active route indicator */
 .nav-bar .nav-link.active {
     color: #87CEEB !important;
