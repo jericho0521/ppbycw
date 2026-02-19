@@ -1,0 +1,86 @@
+.notfound-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.notfound-card {
+  background: rgba(41, 41, 79, 0.499);
+  box-shadow: 0 8px 32px rgba(135, 206, 235, 0.15);
+  padding: 60px 40px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.notfound-code {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8rem;
+  font-weight: bold;
+  color: #bad8d0;
+  text-shadow: 0 0 10px #87CEEB, 0 0 20px #87CEEB, 0 0 40px #87CEEB;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.notfound-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #bad8d0;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  text-shadow: 0 0 5px #87CEEB;
+}
+
+.notfound-path {
+  font-family: 'Electrolize', sans-serif;
+  color: #87CEEB;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.notfound-path span {
+  font-weight: bold;
+}
+
+.notfound-message {
+  font-family: 'Electrolize', sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 36px;
+  letter-spacing: 1px;
+}
+
+.notfound-button {
+  display: inline-block;
+  padding: 12px 36px;
+  border: 2px solid #87CEEB;
+  color: #87CEEB;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.notfound-button:hover {
+  background: #87CEEB;
+  color: #1b1b32;
+}
+
+@media (max-width: 768px) {
+  .notfound-card {
+    padding: 40px 24px;
+  }
+
+  .notfound-code {
+    font-size: 5rem;
+  }
+
+  .notfound-title {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+}

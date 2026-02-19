@@ -37,7 +37,6 @@ function Events() {
                 });
             }
         } catch (error) {
-            console.error('Error submitting form:', error);
             alert('There was an error submitting the form. Please try again.');
         }
     };
@@ -134,6 +133,13 @@ function Events() {
                                     required
                                 ></textarea>
                             </div>
+                            <input
+                                type="checkbox"
+                                name="botcheck"
+                                style={{ display: 'none' }}
+                                tabIndex="-1"
+                                autoComplete="off"
+                            />
                             <button type="submit" className="submit-button">Submit</button>
                         </form>
                     </div>

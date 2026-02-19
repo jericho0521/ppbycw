@@ -47,7 +47,7 @@ function Home() {
       {/* Services Section */}
       <section id="services">
         <div className="row-bar">
-          <div id="rigs-section" classname="title-container">
+          <div id="rigs-section" className="title-container">
             <br></br>
             <h1><b>SERVICES & RIGS</b></h1>
             <p>click image for more details</p>
