@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Assets/Font.css'; //Font
-import '../Assets/image.css'; //Images
 import '../Assets/row.css'; // Row
 import '../Assets/social.css'; //Social Icons
 import './Home.css'; //Home

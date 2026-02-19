@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { NavLink, useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import '../index.css';
 import '../App.css';
@@ -29,10 +29,10 @@ const NavBar = () => {
       onToggle={(expanded) => setExpanded(expanded)}
     >
       <Container>
-        <Navbar.Brand 
-          as={Link} 
-          to="/" 
-          onClick={() => setExpanded(false)} 
+        <Navbar.Brand
+          as={NavLink}
+          to="/"
+          onClick={() => setExpanded(false)}
           style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', color: '#87CEEB', textShadow: '0 0 10px #87CEEB, 0 0 20px #87CEEB, 0 0 30px #87CEEB' }}
         >
           PROJECT PLAY BY CW
@@ -44,7 +44,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav as="ul" className="ms-auto">
             <Nav.Item as="li">
-              <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>HOME</Nav.Link>
+              <Nav.Link as={NavLink} to="/" end onClick={() => setExpanded(false)}>HOME</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
               <Nav.Link onClick={() => handleNavClick('/', 'rigs-section')}>RIGS</Nav.Link>
@@ -53,13 +53,13 @@ const NavBar = () => {
               <Nav.Link onClick={() => handleNavClick('/', 'pricing-section')}>PRICING</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>ABOUT</Nav.Link>
+              <Nav.Link as={NavLink} to="/about" onClick={() => setExpanded(false)}>ABOUT</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link as={Link} to="/Events" onClick={() => setExpanded(false)}>EVENTS</Nav.Link>
+              <Nav.Link as={NavLink} to="/Events" onClick={() => setExpanded(false)}>EVENTS</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link as={Link} to="/FAQ" onClick={() => setExpanded(false)}>FAQ</Nav.Link>
+              <Nav.Link as={NavLink} to="/FAQ" onClick={() => setExpanded(false)}>FAQ</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

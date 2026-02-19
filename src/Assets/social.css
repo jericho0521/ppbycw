@@ -1,11 +1,1 @@
-.social-icons a {
-    color: #ffffff;
-    margin: 0 7px;
-    font-size: 32px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #3c519f;
-}
+/* Social icon styles are handled by Footer.css */

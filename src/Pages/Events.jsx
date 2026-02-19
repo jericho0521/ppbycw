@@ -52,7 +52,7 @@ function Events() {
     const events = getEventsInOrder();
     return (
         <main className="events-container">
-            <section className="event-details" style={{marginTop: '-100px'}}>
+            <section className="event-details">
                 <div className="row-bar4">
                     <h1>EVENTS WITH <br />PROJECT PLAY</h1>
                     <div className="innertext">
