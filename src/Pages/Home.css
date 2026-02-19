@@ -41,21 +41,6 @@ body {
     display: block;
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-    padding: 150px 20px 50px;
-    margin-top: 0;
-    background-image: url('../Images/background_ppbycw.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: calc(100vh - 60px);
-    position: relative;
-    z-index: 1;
-}
 
 .title-container h4 {
     font-family: "Electrolize", sans-serif;
@@ -66,7 +51,12 @@ body {
     font-size: 1em;
 }
 
-/* Button Styles */
+/* ─── Button Styles ─────────────────────────────────────────── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 13px rgba(80, 89, 100, 0.8); }
+  50%       { box-shadow: 0 0 24px rgba(135, 206, 235, 0.5), 0 0 40px rgba(135, 206, 235, 0.2); }
+}
+
 .button {
     font-family: "Electrolize", sans-serif;
     color: #fff;
@@ -76,16 +66,18 @@ body {
     text-align: center;
     display: inline-block;
     cursor: pointer;
-    text-decoration: none; 
-    transition: box-shadow 0.3s, border-color 0.3s;
+    text-decoration: none;
+    transition: box-shadow 0.3s, border-color 0.3s, color 0.3s;
     border-radius: 5px;
     background-color: rgb(13, 32, 40);
-    box-shadow: 0 0px 13px rgb(80, 89, 100);
+    animation: glowPulse 3s ease-in-out infinite;
 }
 
 .button:hover {
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
-    border-color: rgba(255, 255, 255, 1);
+    animation: none;
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.6), 0 0 40px rgba(135, 206, 235, 0.3);
+    border-color: rgba(135, 206, 235, 1);
+    color: #87CEEB;
 }
 
 /* About Section Styles */
@@ -303,8 +295,15 @@ body {
 .pricing-box,
 .member-box {
     position: relative;
-    width: 48%; 
+    width: 48%;
     scroll-behavior: smooth;
+    border-top: 2px solid rgba(135, 206, 235, 0.4);
+    transition: border-top-color 0.3s ease;
+}
+
+.pricing-box:hover,
+.member-box:hover {
+    border-top-color: #87CEEB;
 }
 
 /* Pricing Section */
@@ -500,8 +499,16 @@ body {
 
 .row-bar {
     margin: 0;
-    padding: 20px 0;
+    padding: 60px 20px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row-bar2 {
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
 }
 
 .row-bar h1 {
@@ -526,33 +533,6 @@ body {
     padding: 10px;
     font-family: "Electrolize", sans-serif;
     letter-spacing: 1px;
-}
-
-.gallery-container {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.02);
 }
 
 /* Mobile Styles */
@@ -1144,4 +1124,111 @@ p {
     .birthday-or {
         margin: 4px 0;
     }
+}
+
+/* ─── Hero Tagline (Change 3) ───────────────────────────────── */
+@keyframes letterReveal {
+    from { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+    to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+
+.hero-tagline {
+    margin-top: 24px;
+    letter-spacing: 6px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.85em;
+    color: rgba(135, 206, 235, 0.55);
+    text-transform: uppercase;
+}
+
+.tagline-char {
+    display: inline-block;
+    opacity: 0;
+    animation: letterReveal 0.5s ease forwards;
+}
+
+/* ─── Stats Strip (Change 4) ────────────────────────────────── */
+.stats-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 48px 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(135, 206, 235, 0.12);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.12);
+}
+
+.stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #bad8d0;
+    text-shadow: 0 0 20px rgba(135, 206, 235, 0.4);
+    line-height: 1;
+}
+
+.stat-unit {
+    font-size: 1.2rem;
+    margin-left: 4px;
+    vertical-align: baseline;
+    color: #87CEEB;
+}
+
+.stat-label {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: rgba(135, 206, 235, 0.6);
+    text-transform: uppercase;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(180deg, transparent, rgba(135, 206, 235, 0.3), transparent);
+    flex-shrink: 0;
+    margin: 0 24px;
+}
+
+@media (max-width: 600px) {
+    .stats-strip {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    .stat-divider { display: none; }
+    .stat-item { flex: 1 1 40%; }
+    .stat-number { font-size: 2.2rem; }
+}
+
+/* ─── Member Pricing Highlight (Change 6) ───────────────────── */
+.pricing-details p:nth-child(2) {
+    background: rgba(135, 206, 235, 0.07);
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-top: 6px;
+    border: 1px solid rgba(135, 206, 235, 0.15);
+}
+
+.pricing-details p:nth-child(2) span:first-child::before {
+    content: '★ ';
+    color: #87CEEB;
+    font-size: 0.85em;
+}
+
+.pricing-details p:nth-child(2) .price {
+    color: #87CEEB;
+    font-size: 1.15em;
+    text-shadow: 0 0 8px rgba(135, 206, 235, 0.7);
+    font-weight: bold;
 }

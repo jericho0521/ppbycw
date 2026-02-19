@@ -50,6 +50,7 @@ function Footer() {
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31737.702276204226!2d101.5996466504807!3d3.073553994907396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b0214d3a77b%3A0xd30100d50fe650b0!2s70%2C%20Jalan%20PJS%2011%2F7%2C%20Bandar%20Sunway%2C%2047500%20Subang%20Jaya%2C%20Selangor!5e0!3m2!1sen!2smy!4v1699279814492!5m2!1sen!2smy"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               allowFullScreen
               title="Google Map"
             ></iframe>

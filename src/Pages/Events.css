@@ -18,13 +18,13 @@ html {
 
 /* Event Details Section */
 .event-details {
-    padding-top: 100px;
+    padding-top: 60px;
     position: relative;
 }
 
 .row-bar4 {
     background: linear-gradient(180deg, rgba(27, 27, 50, 0.95) 0%, rgba(27, 27, 50, 0.8) 100%);
-    padding: 80px 20px;
+    padding: 60px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -104,7 +104,30 @@ html {
     color: #87CEEB;
 }
 
+/* ─── Hero Entrance Animation ───────────────────────────────── */
+@keyframes eventsReveal {
+    from { opacity: 0; transform: translateY(20px); filter: blur(3px); }
+    to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+
+.row-bar4 h1 {
+    animation: eventsReveal 0.7s ease both 0.1s;
+}
+
+.row-bar4 .innertext p {
+    animation: eventsReveal 0.7s ease both 0.3s;
+}
+
+.row-bar4 .button-event {
+    animation: eventsReveal 0.7s ease both 0.5s;
+}
+
 /* Button Styling */
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 13px rgba(80, 89, 100, 0.8); }
+    50%       { box-shadow: 0 0 24px rgba(135, 206, 235, 0.5), 0 0 40px rgba(135, 206, 235, 0.2); }
+}
+
 .button-event {
     display: inline-block;
     padding: 15px 30px;
@@ -117,13 +140,15 @@ html {
     transition: all 0.3s ease;
     border: 1px solid rgba(135, 206, 235, 0.3);
     margin-top: 30px;
+    animation: glowPulse 3s ease-in-out infinite;
 }
 
 .button-event:hover {
     background: linear-gradient(45deg, #000138, #1b1b32);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.2);
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.5), 0 5px 15px rgba(135, 206, 235, 0.3);
     color: #87CEEB;
+    animation: none;
 }
 
 /* Events Grid */
@@ -142,10 +167,28 @@ html {
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .events-image-wrapper:hover {
     transform: translateY(-5px);
+}
+
+.events-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, opacity 0.3s ease;
+    font-size: 2rem;
+    opacity: 0;
+}
+
+.events-image-wrapper:hover .events-image-overlay {
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 1;
 }
 
 .events-image-item {
@@ -200,6 +243,17 @@ html {
     margin-bottom: 20px;
 }
 
+.form-label {
+    display: block;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    color: rgba(135, 206, 235, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -210,6 +264,10 @@ html {
     color: #ffffff;
     font-size: 1em;
     transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    resize: none;
 }
 
 .form-group input:focus,
@@ -237,8 +295,14 @@ html {
 .submit-button:hover {
     background: linear-gradient(45deg, #000138, #1b1b32);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.2);
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.5), 0 5px 15px rgba(135, 206, 235, 0.3);
     color: #87CEEB;
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
 }
 
 /* Responsive Design */
@@ -279,4 +343,126 @@ html {
 
 #event-form-section {
     scroll-margin-top: 100px;  /* Offset for fixed header */
+}
+
+/* ─── Event Number Badge ────────────────────────────────────── */
+.event-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.event-number-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(135, 206, 235, 0.35);
+    line-height: 1;
+    letter-spacing: -2px;
+    user-select: none;
+}
+
+/* ─── Additional Info List ──────────────────────────────────── */
+.innertext ul li {
+    list-style: none;
+    padding: 6px 0;
+    color: #87CEEB;
+    letter-spacing: 1px;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.innertext ul li::before {
+    content: '▸ ';
+    color: rgba(135, 206, 235, 0.6);
+}
+
+/* ─── Lightbox ──────────────────────────────────────────────── */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 1px solid rgba(135, 206, 235, 0.2);
+    box-shadow: 0 0 40px rgba(135, 206, 235, 0.15);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #87CEEB;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #87CEEB;
+    font-size: 4rem;
+    cursor: pointer;
+    opacity: 0.6;
+    line-height: 1;
+    transition: opacity 0.2s;
+    padding: 0 16px;
+}
+
+.lightbox-nav:hover { opacity: 1; }
+.lightbox-nav:disabled { opacity: 0.15; cursor: default; }
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(135, 206, 235, 0.6);
+    letter-spacing: 2px;
+}
+
+/* ─── Form Status Messages ──────────────────────────────────── */
+.form-status {
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    border: 1px solid;
+}
+
+.form-status--success {
+    background: rgba(135, 206, 235, 0.1);
+    border-color: rgba(135, 206, 235, 0.4);
+    color: #87CEEB;
+}
+
+.form-status--error {
+    background: rgba(255, 100, 100, 0.08);
+    border-color: rgba(255, 100, 100, 0.3);
+    color: #ff6b6b;
 }

@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Events from './Pages/Events';
 import FAQ from './Pages/FAQ';
 import About from './Pages/About';
+import NotFound from './Pages/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
@@ -36,6 +37,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
