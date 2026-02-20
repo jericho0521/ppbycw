@@ -1044,6 +1044,10 @@
         font-size: 1.5em;
         letter-spacing: 0.5px;
     }
+
+    .promo-section img {
+        max-width: 70%;
+    }
 }
 
 /* Services Section Styles */
