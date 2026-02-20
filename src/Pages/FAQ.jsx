@@ -52,7 +52,7 @@ function FAQ() {
     };
 
     return (
-        <div className="main-content">
+        <div className="main-content faq-page">
             <section id="faq">
                 <div className="row-bar2">
                     <div className="section-container">

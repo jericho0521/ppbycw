@@ -3,21 +3,19 @@ import '../Assets/Font.css'; //Font
 import '../Assets/row.css'; // Row
 import '../Assets/social.css'; //Social Icons
 import './Home.css'; //Home
-import '../App.css'; //App
-import './About.css';
 
 
 // IMAGES
-import { 
-  logo, 
-  image1, 
-  image2, 
-  image3, 
-  com1, 
-  com2, 
-  com4, 
-  com5, 
-  com6, 
+import {
+  logo,
+  image1,
+  image2,
+  image3,
+  com1,
+  com2,
+  com4,
+  com5,
+  com6,
   store,
   rnr,
 
@@ -88,8 +86,8 @@ function Home() {
           <div className="images-container">
             {/* Image 1 */}
             <div className="image-wrapper">
-              <img src={image1} alt="Racing Simulator" />
-              <div 
+              <img src={image1} alt="Racing Simulator" loading="lazy" />
+              <div
                 className="overlay-text">
                 <div className="initial-text">Racing Simulator</div>
                 <div className="hover-text">
@@ -102,8 +100,8 @@ function Home() {
 
             {/* Image 2 */}
             <div className="image-wrapper">
-              <img src={image2} alt="PC Gaming" />
-              <div 
+              <img src={image2} alt="PC Gaming" loading="lazy" />
+              <div
                 className="overlay-text">
                 <div className="initial-text">PC Gaming</div>
                 <div className="hover-text">
@@ -118,8 +116,8 @@ function Home() {
 
             {/* Image 3 */}
             <div className="image-wrapper">
-              <img src={image3} alt="Playstation 5" />
-              <div 
+              <img src={image3} alt="Playstation 5" loading="lazy" />
+              <div
                 className="overlay-text">
                 <div className="initial-text">Playstation 5</div>
                 <div className="hover-text">
@@ -213,7 +211,7 @@ function Home() {
 
             </div>
 
-            
+
 
             {/* Membership Section */}
             <div className="member-box">
@@ -235,10 +233,10 @@ function Home() {
                     <p>RM50 reload:
                       <br />bonus credit of RM 5
                       <br /><span>RM100 reload:
-                      <br />bonus credit of RM15</span></p>
+                        <br />bonus credit of RM15</span></p>
                   </div>
                 </div>
-                
+
                 {/* Birthday Benefits Section */}
                 <div className="pricing-category">
                   <h2 className="birthday-benefits-title">BIRTHDAY BENEFITS</h2>
@@ -260,7 +258,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              
+
             </div>
 
           </div>
@@ -271,7 +269,7 @@ function Home() {
         <div className="promo-box">
           <div className="promo-section">
             <h2>PROMOTIONS</h2>
-            <img src={rnr} alt="Promo 1" />
+            <img src={rnr} alt="Promo 1" loading="lazy" />
           </div>
         </div>
       </section>
@@ -284,9 +282,9 @@ function Home() {
             <div className="content-category">
               <div className="content-details">
                 <p>
-                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub. 
-                  It's space where passions come alive, where everyone, friends and family could come 
-                  together, have some fun and find a sense of belonging. It's not just about the games 
+                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub.
+                  It's space where passions come alive, where everyone, friends and family could come
+                  together, have some fun and find a sense of belonging. It's not just about the games
                   we play, but the connections we build.
                 </p>
               </div>
@@ -303,10 +301,10 @@ function Home() {
             <div className="content-category">
               <div className="content-details">
                 <p>
-                  Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
-                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared, 
-                  your victories celebrated, and where every moment spent here feels like a part of home. 
-                  At Project Play By CW, you're never just a player, you're a valued member of a family. 
+                  Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind,
+                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared,
+                  your victories celebrated, and where every moment spent here feels like a part of home.
+                  At Project Play By CW, you're never just a player, you're a valued member of a family.
                   Welcome to a place where you belong.
                 </p>
               </div>
@@ -314,12 +312,12 @@ function Home() {
             <div className="content-category">
               <div className="gallery-container">
                 <div className="gallery-grid">
-                  <img src={store} alt="Store Front"/>
-                  <img src={com1} alt="Community Member 1"/>
-                  <img src={com2} alt="Community Member 2"/>
-                  <img src={com4} alt="Community Member 3"/>
-                  <img src={com5} alt="Community Member 4"/>
-                  <img src={com6} alt="Community Member 5"/>
+                  <img src={store} alt="Store Front" loading="lazy" />
+                  <img src={com1} alt="Community Member 1" loading="lazy" />
+                  <img src={com2} alt="Community Member 2" loading="lazy" />
+                  <img src={com4} alt="Community Member 3" loading="lazy" />
+                  <img src={com5} alt="Community Member 4" loading="lazy" />
+                  <img src={com6} alt="Community Member 5" loading="lazy" />
                 </div>
               </div>
             </div>

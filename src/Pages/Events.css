@@ -182,8 +182,16 @@ html {
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease, opacity 0.3s ease;
-    font-size: 2rem;
     opacity: 0;
+}
+
+.events-image-overlay::after {
+    content: '';
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(135, 206, 235, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
 }
 
 .events-image-wrapper:hover .events-image-overlay {
@@ -343,6 +351,41 @@ html {
 
 #event-form-section {
     scroll-margin-top: 100px;  /* Offset for fixed header */
+}
+
+/* ─── Mobile Breakpoints ────────────────────────────────────── */
+@media (max-width: 480px) {
+    .event-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .event-number-badge {
+        font-size: 2.5rem;
+    }
+
+    .events-image-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .events-image-item {
+        height: 200px;
+    }
+
+    .lightbox-nav {
+        font-size: 2.5rem;
+        padding: 0 8px;
+    }
+
+    .lightbox-prev { left: 4px; }
+    .lightbox-next { right: 4px; }
+
+    .lightbox-image {
+        max-width: 100vw;
+        max-height: 80vh;
+    }
 }
 
 /* ─── Event Number Badge ────────────────────────────────────── */
