@@ -21,7 +21,8 @@ const NavBar = () => {
       navigate('/'); 
     }
     setTimeout(() => {
-      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
     }, 100);
     setExpanded(false);
   };
@@ -63,10 +64,10 @@ const NavBar = () => {
               <Nav.Link as={NavLink} to="/about" onClick={() => setExpanded(false)}>ABOUT</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link as={NavLink} to="/Events" onClick={() => setExpanded(false)}>EVENTS</Nav.Link>
+              <Nav.Link as={NavLink} to="/events" onClick={() => setExpanded(false)}>EVENTS</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
-              <Nav.Link as={NavLink} to="/FAQ" onClick={() => setExpanded(false)}>FAQ</Nav.Link>
+              <Nav.Link as={NavLink} to="/faq" onClick={() => setExpanded(false)}>FAQ</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

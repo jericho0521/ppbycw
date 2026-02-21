@@ -1,3 +1,7 @@
+.about-page {
+    padding-top: 0;
+}
+
 .about-container {
     padding: 120px 20px 50px;
     min-height: calc(100vh - 170px);
@@ -23,7 +27,7 @@
     font-size: 48px;
     color: #bad8d0;
     margin-bottom: 20px;
-    text-shadow: 
+    text-shadow:
         0 0 2px #87CEEB,
         0 0 7px #87CEEB,
         0 0 3px #87CEEB;
@@ -194,7 +198,7 @@
     font-size: 36px;
     color: #bad8d0;
     margin-bottom: 30px;
-    text-shadow: 
+    text-shadow:
         0 0 2px #87CEEB,
         0 0 5px #87CEEB;
 }
@@ -244,6 +248,7 @@
 
 /* Mobile Styles */
 @media (max-width: 992px) {
+
     .features-grid,
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -304,43 +309,4 @@
     }
 }
 
-/* General paragraph styles */
-p {
-    font-family: "Electrolize", sans-serif;
-    letter-spacing: 1px;
-    line-height: 1.6;
-}
-
-.about-section p,
-.features-section p,
-.story-section p,
-.values-section p {
-    font-family: "Electrolize", sans-serif;
-    letter-spacing: 1px;
-    line-height: 1.6;
-    margin: 10px 0;
-    color: #ffffff;
-}
-
-.feature-item p,
-.value-item p {
-    font-family: "Electrolize", sans-serif;
-    letter-spacing: 1px;
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    p {
-        font-size: 16px;
-        letter-spacing: 0.8px;
-    }
-}
-
-@media (max-width: 480px) {
-    p {
-        font-size: 15px;
-        letter-spacing: 0.7px;
-    }
-}
+/* Bare p selectors removed — scoped rules above handle all About page paragraph styling */

@@ -6,6 +6,34 @@ body {
     background-color: #1b1b32;
 }
 
+/* ─── FAQ Page Spacing ───────────────────────────────────── */
+.faq-page {
+    padding-top: 0;
+}
+
+/* ─── FAQ Section Background ─────────────────────────────── */
+#faq {
+    width: 100%;
+    background: rgba(27, 27, 52, 1);
+    border-top: 1px solid rgba(135, 206, 235, 0.08);
+    position: relative;
+}
+
+#faq::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(135, 206, 235, 0.03) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#faq .row-bar2 {
+    position: relative;
+    z-index: 1;
+}
+
 .faq-container {
     max-width: 1200px;
     margin: 120px auto 50px;

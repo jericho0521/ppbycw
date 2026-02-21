@@ -1,23 +1,21 @@
 import React from 'react';
 import '../Assets/Font.css'; //Font
-import '../Assets/row.css'; // Row
-import '../Assets/social.css'; //Social Icons
 import './Home.css'; //Home
-import '../App.css'; //App
-import './About.css';
+import { WHATSAPP_URL, PS5_GAMES } from '../config/constants';
+import Dither from '../Components/Dither';
 
 
 // IMAGES
-import { 
-  logo, 
-  image1, 
-  image2, 
-  image3, 
-  com1, 
-  com2, 
-  com4, 
-  com5, 
-  com6, 
+import {
+  logo,
+  image1,
+  image2,
+  image3,
+  com1,
+  com2,
+  com4,
+  com5,
+  com6,
   store,
   rnr,
 
@@ -33,7 +31,7 @@ function Home() {
       <section id="reservation">
         <div className="title-container">
           <div className="logo-image">
-            <img src={logo} className="image-item" alt="Project Play Logo" />
+            <img src={logo} className="image-item" alt="Project Play Logo" fetchpriority="high" />
           </div>
           <p className="hero-tagline">
             {"WHERE GAMERS BELONG, PLAY TODAY".split('').map((char, i) => (
@@ -42,7 +40,7 @@ function Home() {
               </span>
             ))}
           </p>
-          <a href="https://wa.me/601116281524" target="_blank" rel="noopener noreferrer" className="button">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="button">
             <h4 className="montserrat-bold">RESERVATION</h4>
           </a>
           <br></br>
@@ -50,8 +48,22 @@ function Home() {
         </div>
       </section>
 
-      {/* Stats Strip */}
-      <section id="stats">
+      <div className="dither-sections">
+        <div className="dither-bg">
+          <Dither
+            waveColor={[0.32, 0.32, 0.60]}
+            disableAnimation={false}
+            enableMouseInteraction={true}
+            mouseRadius={0.3}
+            colorNum={4}
+            waveAmplitude={0.3}
+            waveFrequency={3}
+            waveSpeed={0.05}
+            pixelSize={2}
+          />
+        </div>
+        {/* Stats Strip */}
+        <section id="stats">
         <div className="stats-strip">
           <div className="stat-item">
             <span className="stat-number">2024</span>
@@ -88,8 +100,8 @@ function Home() {
           <div className="images-container">
             {/* Image 1 */}
             <div className="image-wrapper">
-              <img src={image1} alt="Racing Simulator" />
-              <div 
+              <img src={image1} alt="Racing Simulator" loading="lazy" />
+              <div
                 className="overlay-text">
                 <div className="initial-text">Racing Simulator</div>
                 <div className="hover-text">
@@ -102,8 +114,8 @@ function Home() {
 
             {/* Image 2 */}
             <div className="image-wrapper">
-              <img src={image2} alt="PC Gaming" />
-              <div 
+              <img src={image2} alt="PC Gaming" loading="lazy" />
+              <div
                 className="overlay-text">
                 <div className="initial-text">PC Gaming</div>
                 <div className="hover-text">
@@ -118,17 +130,15 @@ function Home() {
 
             {/* Image 3 */}
             <div className="image-wrapper">
-              <img src={image3} alt="Playstation 5" />
-              <div 
+              <img src={image3} alt="Playstation 5" loading="lazy" />
+              <div
                 className="overlay-text">
                 <div className="initial-text">Playstation 5</div>
                 <div className="hover-text">
                   <h1><b>GAMES</b></h1>
-                  <p>FC 25</p>
-                  <p>UFC 5</p>
-                  <p>Overcooked</p>
-                  <p>NBA 2K24</p>
-                  <p>Tekken 8</p>
+                  {PS5_GAMES.map((game) => (
+                    <p key={game}>{game}</p>
+                  ))}
                 </div>
               </div>
             </div>
@@ -213,7 +223,7 @@ function Home() {
 
             </div>
 
-            
+
 
             {/* Membership Section */}
             <div className="member-box">
@@ -235,10 +245,10 @@ function Home() {
                     <p>RM50 reload:
                       <br />bonus credit of RM 5
                       <br /><span>RM100 reload:
-                      <br />bonus credit of RM15</span></p>
+                        <br />bonus credit of RM15</span></p>
                   </div>
                 </div>
-                
+
                 {/* Birthday Benefits Section */}
                 <div className="pricing-category">
                   <h2 className="birthday-benefits-title">BIRTHDAY BENEFITS</h2>
@@ -260,7 +270,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              
+
             </div>
 
           </div>
@@ -271,7 +281,7 @@ function Home() {
         <div className="promo-box">
           <div className="promo-section">
             <h2>PROMOTIONS</h2>
-            <img src={rnr} alt="Promo 1" />
+            <img src={rnr} alt="Promo 1" loading="lazy" />
           </div>
         </div>
       </section>
@@ -284,9 +294,9 @@ function Home() {
             <div className="content-category">
               <div className="content-details">
                 <p>
-                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub. 
-                  It's space where passions come alive, where everyone, friends and family could come 
-                  together, have some fun and find a sense of belonging. It's not just about the games 
+                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub.
+                  It's space where passions come alive, where everyone, friends and family could come
+                  together, have some fun and find a sense of belonging. It's not just about the games
                   we play, but the connections we build.
                 </p>
               </div>
@@ -303,10 +313,10 @@ function Home() {
             <div className="content-category">
               <div className="content-details">
                 <p>
-                  Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind, 
-                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared, 
-                  your victories celebrated, and where every moment spent here feels like a part of home. 
-                  At Project Play By CW, you're never just a player, you're a valued member of a family. 
+                  Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind,
+                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared,
+                  your victories celebrated, and where every moment spent here feels like a part of home.
+                  At Project Play By CW, you're never just a player, you're a valued member of a family.
                   Welcome to a place where you belong.
                 </p>
               </div>
@@ -314,18 +324,19 @@ function Home() {
             <div className="content-category">
               <div className="gallery-container">
                 <div className="gallery-grid">
-                  <img src={store} alt="Store Front"/>
-                  <img src={com1} alt="Community Member 1"/>
-                  <img src={com2} alt="Community Member 2"/>
-                  <img src={com4} alt="Community Member 3"/>
-                  <img src={com5} alt="Community Member 4"/>
-                  <img src={com6} alt="Community Member 5"/>
+                  <img src={store} alt="Store Front" loading="lazy" />
+                  <img src={com1} alt="Community Member 1" loading="lazy" />
+                  <img src={com2} alt="Community Member 2" loading="lazy" />
+                  <img src={com4} alt="Community Member 3" loading="lazy" />
+                  <img src={com5} alt="Community Member 4" loading="lazy" />
+                  <img src={com6} alt="Community Member 5" loading="lazy" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

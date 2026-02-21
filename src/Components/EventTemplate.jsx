@@ -17,8 +17,8 @@ const EventTemplate = ({
       <div className="events-image-grid">
         {images.map((src, index) => (
           <div key={index} className="events-image-wrapper" onClick={() => onImageClick?.(images, index)}>
-            <img src={src} alt={`${title} ${index + 1}`} className="events-image-item" />
-            <div className="events-image-overlay"><span>🔍</span></div>
+            <img src={src} alt={`${title} ${index + 1}`} className="events-image-item" loading="lazy" />
+            <div className="events-image-overlay"></div>
           </div>
         ))}
       </div>

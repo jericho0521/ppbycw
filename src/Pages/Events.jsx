@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Events.css'; 
 import EventTemplate from '../Components/EventTemplate';
 import { getEventsInOrder } from '../Data/eventsData'; 
@@ -8,6 +8,7 @@ function Events() {
     const [formStatus, setFormStatus] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [lightbox, setLightbox] = useState(null);
+    const touchStartX = useRef(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -186,9 +187,21 @@ function Events() {
                 </div>
             </div>
             {lightbox && (
-                <div className="lightbox-overlay" onClick={() => setLightbox(null)}>
-                    <button className="lightbox-close" onClick={() => setLightbox(null)}>✕</button>
+                <div
+                    className="lightbox-overlay"
+                    onClick={() => setLightbox(null)}
+                    onTouchStart={e => { touchStartX.current = e.touches[0].clientX; }}
+                    onTouchEnd={e => {
+                        if (touchStartX.current === null) return;
+                        const dx = e.changedTouches[0].clientX - touchStartX.current;
+                        if (dx < -50) setLightbox(l => ({ ...l, currentIndex: Math.min(l.currentIndex + 1, l.images.length - 1) }));
+                        if (dx >  50) setLightbox(l => ({ ...l, currentIndex: Math.max(l.currentIndex - 1, 0) }));
+                        touchStartX.current = null;
+                    }}
+                >
+                    <button className="lightbox-close" aria-label="Close lightbox" onClick={() => setLightbox(null)}>✕</button>
                     <button
+                        aria-label="Previous image"
                         className="lightbox-nav lightbox-prev"
                         onClick={e => { e.stopPropagation(); setLightbox(l => ({ ...l, currentIndex: Math.max(l.currentIndex - 1, 0) })); }}
                         disabled={lightbox.currentIndex === 0}
@@ -196,10 +209,11 @@ function Events() {
                     <img
                         className="lightbox-image"
                         src={lightbox.images[lightbox.currentIndex]}
-                        alt="Event"
+                        alt={`Event image ${lightbox.currentIndex + 1} of ${lightbox.images.length}`}
                         onClick={e => e.stopPropagation()}
                     />
                     <button
+                        aria-label="Next image"
                         className="lightbox-nav lightbox-next"
                         onClick={e => { e.stopPropagation(); setLightbox(l => ({ ...l, currentIndex: Math.min(l.currentIndex + 1, l.images.length - 1) })); }}
                         disabled={lightbox.currentIndex === lightbox.images.length - 1}

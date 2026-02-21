@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
+import { WHATSAPP_URL, PHONE_DISPLAY, HOURS_DISPLAY, HOURS_DAYS } from '../config/constants';
 
 function Footer() {
   return (
@@ -8,19 +9,19 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Hours</h3>
-          <p>Monday - Sunday</p>
-          <p>12:00 PM - 2:00 AM</p>
+          <p>{HOURS_DAYS}</p>
+          <p>{HOURS_DISPLAY}</p>
         </div>
 
         <div className="footer-section">
           <h3>Connect</h3>
-          <p><FaPhone /> +60 11-1628 1524</p>
+          <p><FaPhone /> {PHONE_DISPLAY}</p>
           <p><FaEnvelope /> ppbycw@gmail.com</p>
           <div className="social-icons">
             <a href="https://www.instagram.com/projectplaybycw/" rel="noopener noreferrer" target="_blank">
               <FaInstagram />
             </a>
-            <a href="https://wa.me/601116281524" rel="noopener noreferrer" target="_blank">
+            <a href={WHATSAPP_URL} rel="noopener noreferrer" target="_blank">
               <FaWhatsapp />
             </a>
           </div>
