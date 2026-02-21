@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Assets/Font.css'; //Font
 import './Home.css'; //Home
+import { WHATSAPP_URL, PS5_GAMES } from '../config/constants';
 
 
 // IMAGES
@@ -38,7 +39,7 @@ function Home() {
               </span>
             ))}
           </p>
-          <a href="https://wa.me/601116281524" target="_blank" rel="noopener noreferrer" className="button">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="button">
             <h4 className="montserrat-bold">RESERVATION</h4>
           </a>
           <br></br>
@@ -120,11 +121,9 @@ function Home() {
                 <div className="initial-text">Playstation 5</div>
                 <div className="hover-text">
                   <h1><b>GAMES</b></h1>
-                  <p>FC 25</p>
-                  <p>UFC 5</p>
-                  <p>Overcooked</p>
-                  <p>NBA 2K24</p>
-                  <p>Tekken 8</p>
+                  {PS5_GAMES.map((game) => (
+                    <p key={game}>{game}</p>
+                  ))}
                 </div>
               </div>
             </div>

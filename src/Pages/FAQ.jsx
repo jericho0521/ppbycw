@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FAQ.css';
+import { HOURS_DISPLAY } from '../config/constants';
 
 function FAQ() {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -22,7 +23,7 @@ function FAQ() {
         },
         {
             question: "What are your operating hours?",
-            answer: "We are open daily from 12:00 PM to 2:00 AM. During peak hours and weekends, we recommend making a reservation to ensure availability.",
+            answer: `We are open daily from ${HOURS_DISPLAY}. During peak hours and weekends, we recommend making a reservation to ensure availability.`,
             icon: "fa-regular fa-clock"
         },
         {
