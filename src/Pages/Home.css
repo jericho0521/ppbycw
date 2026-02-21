@@ -920,7 +920,7 @@
     }
 
     .image-wrapper {
-        height: 220px;
+        height: 240px;
         margin: 0 auto;
         width: 100%;
         max-width: 350px;
@@ -934,6 +934,22 @@
     .initial-text {
         font-size: 24px;
     }
+
+    .hover-text {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .hover-text h1 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .hover-text p {
+        font-size: 12px;
+        line-height: 1.2;
+        margin: 2px 0;
+    }
 }
 
 /* iPhone SE and smaller screens */
@@ -944,12 +960,20 @@
     }
 
     .image-wrapper {
-        height: 200px;
+        height: 220px;
         max-width: 280px;
     }
 
     .initial-text {
         font-size: 22px;
+    }
+
+    .hover-text h1 {
+        font-size: 13px;
+    }
+
+    .hover-text p {
+        font-size: 11px;
     }
 }
 

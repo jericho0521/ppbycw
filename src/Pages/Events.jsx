@@ -199,8 +199,9 @@ function Events() {
                         touchStartX.current = null;
                     }}
                 >
-                    <button className="lightbox-close" onClick={() => setLightbox(null)}>✕</button>
+                    <button className="lightbox-close" aria-label="Close lightbox" onClick={() => setLightbox(null)}>✕</button>
                     <button
+                        aria-label="Previous image"
                         className="lightbox-nav lightbox-prev"
                         onClick={e => { e.stopPropagation(); setLightbox(l => ({ ...l, currentIndex: Math.max(l.currentIndex - 1, 0) })); }}
                         disabled={lightbox.currentIndex === 0}
@@ -208,10 +209,11 @@ function Events() {
                     <img
                         className="lightbox-image"
                         src={lightbox.images[lightbox.currentIndex]}
-                        alt="Event"
+                        alt={`Event image ${lightbox.currentIndex + 1} of ${lightbox.images.length}`}
                         onClick={e => e.stopPropagation()}
                     />
                     <button
+                        aria-label="Next image"
                         className="lightbox-nav lightbox-next"
                         onClick={e => { e.stopPropagation(); setLightbox(l => ({ ...l, currentIndex: Math.min(l.currentIndex + 1, l.images.length - 1) })); }}
                         disabled={lightbox.currentIndex === lightbox.images.length - 1}

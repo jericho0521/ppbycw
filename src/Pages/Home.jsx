@@ -1,7 +1,5 @@
 import React from 'react';
 import '../Assets/Font.css'; //Font
-import '../Assets/row.css'; // Row
-import '../Assets/social.css'; //Social Icons
 import './Home.css'; //Home
 
 
@@ -31,7 +29,7 @@ function Home() {
       <section id="reservation">
         <div className="title-container">
           <div className="logo-image">
-            <img src={logo} className="image-item" alt="Project Play Logo" />
+            <img src={logo} className="image-item" alt="Project Play Logo" fetchpriority="high" />
           </div>
           <p className="hero-tagline">
             {"WHERE GAMERS BELONG, PLAY TODAY".split('').map((char, i) => (
