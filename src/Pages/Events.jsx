@@ -209,7 +209,7 @@ function Events() {
                     <img
                         className="lightbox-image"
                         src={lightbox.images[lightbox.currentIndex]}
-                        alt={`Event image ${lightbox.currentIndex + 1} of ${lightbox.images.length}`}
+                        alt={`Event ${lightbox.currentIndex + 1} of ${lightbox.images.length}`}
                         onClick={e => e.stopPropagation()}
                     />
                     <button
