@@ -2,7 +2,7 @@ import React from 'react';
 import '../Assets/Font.css'; //Font
 import './Home.css'; //Home
 import { WHATSAPP_URL, PS5_GAMES } from '../config/constants';
-import Dither from '../Components/Dither';
+
 
 
 // IMAGES
@@ -48,23 +48,9 @@ function Home() {
         </div>
       </section>
 
-      <div className="dither-sections">
-        <div className="dither-bg">
-          <Dither
-            waveColor={[0.32, 0.32, 0.60]}
-            disableAnimation={false}
-            enableMouseInteraction={true}
-            mouseRadius={0.3}
-            colorNum={4}
-            waveAmplitude={0.3}
-            waveFrequency={3}
-            waveSpeed={0.05}
-            pixelSize={2}
-          />
-        </div>
         {/* Stats Strip */}
         <section id="stats">
-        <div className="stats-strip">
+          <div className="stats-strip">
           <div className="stat-item">
             <span className="stat-number">2024</span>
             <span className="stat-label">FOUNDED</span>
@@ -84,8 +70,8 @@ function Home() {
             <span className="stat-number">7</span>
             <span className="stat-label">DAYS A WEEK</span>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       {/* Services Section */}
       <section id="services">
@@ -336,7 +322,6 @@ function Home() {
           </div>
         </div>
       </section>
-      </div>
     </div>
   );
 }
