@@ -218,7 +218,7 @@ function Home() {
                 <div className="pricing-category">
                   <h2>JOIN OUR MEMBERSHIP NOW</h2>
                   <div className="member-details">
-                    <p>Registration fee of RM50
+                    <p>Registration fee of RM100
                       <br />Enjoy member exclusive rates and packages</p>
                   </div>
                 </div>
