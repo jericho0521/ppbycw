@@ -6,6 +6,9 @@ import './index.css';  // Your custom CSS (if any)
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap CSS
 
+if (process.env.NODE_ENV === 'development') {
+  import('react-grab');
+}
 
 ReactDOM.render(
   <React.StrictMode>
