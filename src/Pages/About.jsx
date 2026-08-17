@@ -6,14 +6,14 @@ function About() {
         <div className="main-content about-page">
             <section id="about">
                     <div className="section-container">
-                        <h1><b>ABOUT PROJECT PLAY BY CW</b></h1>
+                        <h1 className="section-heading"><b>ABOUT PROJECT PLAY BY CW</b></h1>
                         <div className="content-category">
                             <div className="content-details">
                                 <p>Your Premier Gaming Destination in Bandar Sunway, Subang Jaya, featuring high-end Racing Simulators, Gaming PCs, and PS5 consoles. Experience the thrill of realistic racing with our professional-grade simulator setup, equipped with Logitech G29 racing wheel and premium racing seats.</p>
                             </div>
                         </div>
 
-                        <h1><b>OUR MISSION</b></h1>
+                        <h1 className="section-heading"><b>OUR MISSION</b></h1>
                         <div className="content-category">
                             <div className="content-details">
                                 <p>
@@ -24,7 +24,7 @@ function About() {
                                 </p>
                             </div>
 
-                        <h1><b>What Sets Us Apart</b></h1>
+                        <h1 className="section-heading"><b>What Sets Us Apart</b></h1>
                         <div className="content-category">
                             <div className="content-details">
                                 <div className="features-grid">
@@ -52,7 +52,7 @@ function About() {
                             </div>
                         </div>
 
-                        <h1><b>Our Story</b></h1>
+                        <h1 className="section-heading"><b>Our Story</b></h1>
                         <div className="content-category">
                             <div className="content-details">
                                 <p>
@@ -70,7 +70,7 @@ function About() {
                             </div>
                         </div>
 
-                        <h1><b>Our Values</b></h1>
+                        <h1 className="section-heading"><b>Our Values</b></h1>
                         <div className="content-category">
                             <div className="content-details">
                                 <div className="values-grid">
@@ -96,4 +96,4 @@ function About() {
     );
 }
 
-export default About; 
+export default About;

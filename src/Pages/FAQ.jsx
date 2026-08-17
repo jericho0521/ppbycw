@@ -57,7 +57,7 @@ function FAQ() {
             <section id="faq">
                 <div className="row-bar2">
                     <div className="section-container">
-                        <h1><b>Frequently Asked Questions</b></h1>
+                        <h1 className="section-heading"><b>Frequently Asked Questions</b></h1>
                         <div className="content-category">
                             <div className="content-details">
                                 <p>Find answers to common questions about our gaming services</p>
@@ -95,4 +95,4 @@ function FAQ() {
     );
 }
 
-export default FAQ; 
+export default FAQ;

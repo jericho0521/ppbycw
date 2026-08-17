@@ -1,0 +1,133 @@
+.rowBar {
+    background: linear-gradient(180deg, rgba(27, 27, 50, 0.95) 0%, rgba(27, 27, 50, 0.8) 100%);
+    padding: 60px 20px;
+    position: relative;
+}
+
+.eventFormSection {
+    max-width: 800px;
+    margin: 0 auto;
+    scroll-margin-top: 100px;
+}
+
+.eventFormSection h1 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #bad8d0;
+    text-shadow:
+        0 0 2px #87CEEB,
+        0 0 7px #87CEEB,
+        0 0 3px #87CEEB;
+}
+
+.eventFormContainer {
+    background: rgba(41, 41, 79, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(135, 206, 235, 0.1);
+}
+
+.eventFormContainer h2 {
+    color: #87CEEB;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    display: block;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    color: rgba(135, 206, 235, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(135, 206, 235, 0.2);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.formGroup textarea {
+    resize: none;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #87CEEB;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.2);
+}
+
+.submitButton {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #1b1b32, #000138);
+    color: #ffffff;
+    border: 1px solid rgba(135, 206, 235, 0.3);
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+    background: linear-gradient(45deg, #000138, #1b1b32);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.5), 0 5px 15px rgba(135, 206, 235, 0.3);
+    color: #87CEEB;
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.formStatus {
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    border: 1px solid;
+}
+
+.formStatusSuccess {
+    background: rgba(135, 206, 235, 0.1);
+    border-color: rgba(135, 206, 235, 0.4);
+    color: #87CEEB;
+}
+
+.formStatusError {
+    background: rgba(255, 100, 100, 0.08);
+    border-color: rgba(255, 100, 100, 0.3);
+    color: #ff6b6b;
+}
+
+@media screen and (max-width: 768px) {
+    .eventFormSection h1 {
+        font-size: 2.5em;
+    }
+
+    .eventFormContainer {
+        padding: 25px;
+    }
+}
