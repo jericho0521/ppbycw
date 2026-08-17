@@ -1,0 +1,236 @@
+.pricing {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid rgba(135, 206, 235, 0.08);
+  background: rgba(26, 26, 56, 0.8);
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 30% at 50% 0%, rgba(135, 206, 235, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sectionBody {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.pricingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.pricingSection h1 {
+  margin-bottom: 30px;
+  color: #bad8d0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 2px #87ceeb, 0 0 7px #87ceeb, 0 0 3px #87ceeb;
+}
+
+.boxContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pricingBox,
+.memberBox {
+  position: relative;
+  width: 48%;
+  border-top: 2px solid rgba(135, 206, 235, 0.4);
+  scroll-behavior: smooth;
+  transition: border-top-color 0.3s ease;
+}
+
+.pricingBox:hover,
+.memberBox:hover {
+  border-top-color: #87ceeb;
+}
+
+.pricingCategory {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.pricingCategory h2 {
+  margin-bottom: 10px;
+  color: #bad8d0;
+  font-family: 'Electrolize', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 0 2px #87ceeb, 0 0 7px #87ceeb, 0 0 3px #87ceeb;
+}
+
+.pricingDetails,
+.memberDetails {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #1b2332d7;
+  box-shadow: 0 0 10px rgba(188, 186, 216, 0.207);
+  color: #fff;
+  font-family: 'Electrolize', sans-serif;
+  font-size: 18px;
+  gap: 15px;
+}
+
+.pricingDetails p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-family: 'Electrolize', sans-serif;
+}
+
+.memberRate {
+  margin-top: 6px !important;
+  padding: 6px 10px;
+  border: 1px solid rgba(135, 206, 235, 0.15);
+  border-radius: 4px;
+  background: rgba(135, 206, 235, 0.07);
+}
+
+.memberRate span:first-child::before {
+  content: '★ ';
+  color: #87ceeb;
+  font-size: 0.85em;
+}
+
+.memberRate .price {
+  color: #87ceeb;
+  font-size: 1.15em;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(135, 206, 235, 0.7);
+}
+
+.package {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.packageTitle {
+  color: #fff;
+  font-family: 'Electrolize', sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+
+.priceGroup {
+  text-align: right;
+}
+
+.price {
+  display: block;
+  color: #fff;
+  font-family: 'Electrolize', sans-serif;
+  font-size: 20px;
+}
+
+.birthdayBenefitsTitle {
+  margin-bottom: 10px;
+  color: #b9f2ff !important;
+  font-family: 'Electrolize', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 2px #b9f2ff, 0 0 7px #b9f2ff, 0 0 3px #b9f2ff !important;
+}
+
+.birthdayBenefitsDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 20px;
+  padding: 40px 60px;
+  border-radius: 4px;
+  background-color: #1b2332d7;
+  box-shadow: 0 0 10px rgba(188, 186, 216, 0.207);
+  font-family: 'Electrolize', sans-serif;
+}
+
+.birthdayBenefit {
+  flex: 1;
+  min-width: 120px;
+  color: #e6f7ff;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 2px #b9f2ff, 0 0 7px #b9f2ff, 0 0 3px #b9f2ff;
+}
+
+.birthdayBenefit span {
+  display: block;
+  margin-bottom: 2px;
+  color: #b9f2ff;
+  font-size: 1.1em;
+}
+
+.birthdayOr {
+  margin: 0 8px;
+  color: #b9f2ff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 0 2px #b9f2ff, 0 0 7px #b9f2ff, 0 0 3px #b9f2ff;
+}
+
+@media (max-width: 768px) {
+  .boxContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricingBox,
+  .memberBox {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .pricingDetails,
+  .memberDetails {
+    width: 100%;
+  }
+
+  .pricingCategory h2 {
+    font-size: 26px;
+  }
+
+  .packageTitle {
+    font-size: 17px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .birthdayBenefitsDetails {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .birthdayOr {
+    margin: 4px 0;
+  }
+}

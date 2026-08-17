@@ -10,6 +10,7 @@ import About from './Pages/About';
 import NotFound from './Pages/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './Assets/Font.css';
 import './App.css';
 
 // Component to handle canonical URLs

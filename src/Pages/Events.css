@@ -315,6 +315,13 @@ html {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .innertext {
+        width: 85%;
+        font-size: 1.1em;
+        letter-spacing: 1.2px;
+        text-align: center;
+    }
+
     .row-bar4 h1,
     .past-events h1,
     .event-form-section h1 {
