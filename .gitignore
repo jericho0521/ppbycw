@@ -25,3 +25,6 @@ yarn-error.log*
 
 # local documentation files
 *.local.md
+
+# Vercel project metadata
+/.vercel
