@@ -21,7 +21,7 @@ npm test -- --testPathPattern=<filename>
 
 ## Architecture
 
-Pure frontend React 18 SPA (no backend). Bootstrapped with Create React App. Deployed on AWS Amplify (`https://main.d23ipzumjsumtt.amplifyapp.com/#/`) with an alternative gh-pages deploy path.
+Pure frontend React 18 SPA (no backend). Bootstrapped with Create React App. Deployed on Vercel from `main`, with `staging` and pull-request branches deployed as previews.
 
 **Routing** (`App.jsx`): BrowserRouter with four routes — `/`, `/events`, `/faq`, `/about`. `react-helmet-async` is used to inject canonical URLs based on the current path.
 
