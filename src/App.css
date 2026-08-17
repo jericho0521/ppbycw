@@ -29,20 +29,13 @@
   }
 }
 
-.main-content>section,
-.dither-sections>section {
+.main-content > section {
   animation: fadeUp 0.6s ease both;
 }
 
-.main-content>section:nth-child(1) {
+.main-content > section:nth-child(1) {
   animation-delay: 0.05s;
 }
-
-/* .dither-bg is nth-child(1) inside .dither-sections, so #stats = nth-child(2) */
-.dither-sections>section:nth-child(2) { animation-delay: 0.15s; }
-.dither-sections>section:nth-child(3) { animation-delay: 0.25s; }
-.dither-sections>section:nth-child(4) { animation-delay: 0.35s; }
-.dither-sections>section:nth-child(5) { animation-delay: 0.45s; }
 
 * {
   margin: 0;
@@ -53,6 +46,28 @@
 html {
   scroll-behavior: smooth;
   background-color: #1b1b32;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f141e;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #87ceeb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bad8d0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #87ceeb #0f141e;
 }
 
 body {
@@ -171,7 +186,7 @@ html {
 }
 
 /* ─── Section Heading Accent Line ───────────────────────────── */
-.section-container h1::before {
+.section-heading::before {
   content: '';
   display: block;
   width: 48px;

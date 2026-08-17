@@ -2,6 +2,46 @@
     padding-top: 0;
 }
 
+.about-page .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 10px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-page .content-category {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.about-page .content-details {
+    width: 800px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #1b2332;
+    box-shadow: 0 8px 32px rgba(135, 206, 235, 0.15);
+    font-family: "Electrolize", sans-serif;
+    font-size: 18px;
+    gap: 15px;
+}
+
+.about-page .content-details p {
+    padding: 10px;
+    color: #fff;
+    font-family: "Electrolize", sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 .about-container {
     padding: 120px 20px 50px;
     min-height: calc(100vh - 170px);
@@ -218,25 +258,7 @@
     font-size: 1.1em;
 }
 
-/* Content Styles */
-.content-details {
-    padding: 20px;
-    background: #1b2332;
-    border-radius: 4px;
-    box-shadow: 0 8px 32px rgba(135, 206, 235, 0.15);
-    margin-bottom: 30px;
-}
-
-.content-details p {
-    font-family: "Electrolize", sans-serif;
-    color: #fff;
-    line-height: 1.8;
-    font-size: 1em;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.section-container h1 {
+.about-page .section-container h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #bad8d0;
@@ -249,6 +271,11 @@
 /* Mobile Styles */
 @media (max-width: 992px) {
 
+    .about-page .content-details {
+        width: 90%;
+        max-width: 800px;
+    }
+
     .features-grid,
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -257,6 +284,14 @@
 }
 
 @media (max-width: 768px) {
+    .about-page .section-container {
+        padding: 30px 15px;
+    }
+
+    .about-page .content-details p {
+        padding: 5px;
+    }
+
     .about-container {
         padding: 100px 15px 30px;
     }
@@ -297,7 +332,7 @@
         font-size: 1em;
     }
 
-    .section-container h1 {
+    .about-page .section-container h1 {
         font-size: 1.8em;
         letter-spacing: 2px;
     }
@@ -306,6 +341,16 @@
     .value-item h3 {
         font-size: 1.2em;
         letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page .section-container {
+        padding: 20px 10px;
+    }
+
+    .about-page .content-details {
+        width: 95%;
     }
 }
 

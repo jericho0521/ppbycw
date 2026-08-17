@@ -1,0 +1,21 @@
+.homePage {
+  isolation: isolate;
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    padding: 80px 0 50px;
+  }
+}
+
+@media (max-width: 380px) {
+  .homePage {
+    padding: 60px 0 50px;
+  }
+}
+
+@supports (padding: max(0px)) {
+  .homePage {
+    padding-bottom: max(50px, env(safe-area-inset-bottom));
+  }
+}
