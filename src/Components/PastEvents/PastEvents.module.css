@@ -1,0 +1,261 @@
+.rowBar {
+    background-color: rgba(27, 27, 50, 0.95);
+    padding: 60px 20px;
+    position: relative;
+}
+
+.pastEvents h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #bad8d0;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow:
+        0 0 2px #87CEEB,
+        0 0 7px #87CEEB,
+        0 0 3px #87CEEB;
+}
+
+.pastEvents h3 {
+    font-family: "Electrolize", sans-serif;
+    color: #bad8d0;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    text-shadow:
+        0 0 2px #87CEEB,
+        0 0 7px #87CEEB,
+        0 0 3px #87CEEB;
+}
+
+.innerText {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.innerText p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.innerText ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #87CEEB;
+}
+
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.imageWrapper:hover {
+    transform: translateY(-5px);
+}
+
+.imageOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.imageOverlay::after {
+    content: '';
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(135, 206, 235, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
+}
+
+.imageWrapper:hover .imageOverlay {
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 1;
+}
+
+.imageItem {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .imageItem {
+    transform: scale(1.05);
+}
+
+.eventHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.eventNumberBadge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(135, 206, 235, 0.35);
+    line-height: 1;
+    letter-spacing: -2px;
+    user-select: none;
+}
+
+.innerText ul li {
+    list-style: none;
+    padding: 6px 0;
+    color: #87CEEB;
+    letter-spacing: 1px;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.innerText ul li::before {
+    content: '▸ ';
+    color: rgba(135, 206, 235, 0.6);
+}
+
+.lightboxOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightboxImage {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 1px solid rgba(135, 206, 235, 0.2);
+    box-shadow: 0 0 40px rgba(135, 206, 235, 0.15);
+}
+
+.lightboxClose {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #87CEEB;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.lightboxClose:hover {
+    opacity: 1;
+}
+
+.lightboxNav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #87CEEB;
+    font-size: 4rem;
+    cursor: pointer;
+    opacity: 0.6;
+    line-height: 1;
+    transition: opacity 0.2s;
+    padding: 0 16px;
+}
+
+.lightboxNav:hover {
+    opacity: 1;
+}
+
+.lightboxNav:disabled {
+    opacity: 0.15;
+    cursor: default;
+}
+
+.lightboxPrev {
+    left: 20px;
+}
+
+.lightboxNext {
+    right: 20px;
+}
+
+.lightboxCounter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Electrolize', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(135, 206, 235, 0.6);
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .pastEvents h1 {
+        font-size: 2.5em;
+    }
+
+    .pastEvents h3 {
+        font-size: 1.6em;
+    }
+
+    .innerText {
+        width: 85%;
+        font-size: 1.1em;
+        letter-spacing: 1.2px;
+        text-align: center;
+    }
+
+    .innerText p {
+        font-size: 1.1em;
+    }
+
+    .imageGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .imageItem {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imageGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .imageItem {
+        height: 200px;
+    }
+}

@@ -1,13 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import PastEvents from '../Components/PastEvents/PastEvents';
 import './Events.css';
-import EventTemplate from '../Components/EventTemplate';
-import { eventsData } from '../Data/eventsData';
 
 function Events() {
     const [formStatus, setFormStatus] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [lightbox, setLightbox] = useState(null);
-    const touchStartX = useRef(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -15,17 +12,6 @@ function Events() {
         eventType: '',
         message: ''
     });
-
-    useEffect(() => {
-        const handleKey = (e) => {
-            if (!lightbox) return;
-            if (e.key === 'Escape') setLightbox(null);
-            if (e.key === 'ArrowRight') setLightbox(l => ({ ...l, currentIndex: Math.min(l.currentIndex + 1, l.images.length - 1) }));
-            if (e.key === 'ArrowLeft')  setLightbox(l => ({ ...l, currentIndex: Math.max(l.currentIndex - 1, 0) }));
-        };
-        window.addEventListener('keydown', handleKey);
-        return () => window.removeEventListener('keydown', handleKey);
-    }, [lightbox]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -83,18 +69,7 @@ function Events() {
                 </div>
             </section>
 
-            {/* Render all events using the template */}
-            {eventsData.map((event, index) => (
-                <EventTemplate
-                    key={event.id}
-                    eventNumber={index + 1}
-                    title={event.title}
-                    description={event.description}
-                    additionalInfo={event.additionalInfo}
-                    images={event.images}
-                    onImageClick={(images, idx) => setLightbox({ images, currentIndex: idx })}
-                />
-            ))}
+            <PastEvents />
 
             <div className="row-bar6">
                 <div className="event-form-section" id="event-form-section">
@@ -181,41 +156,6 @@ function Events() {
                     </div>
                 </div>
             </div>
-            {lightbox && (
-                <div
-                    className="lightbox-overlay"
-                    onClick={() => setLightbox(null)}
-                    onTouchStart={e => { touchStartX.current = e.touches[0].clientX; }}
-                    onTouchEnd={e => {
-                        if (touchStartX.current === null) return;
-                        const dx = e.changedTouches[0].clientX - touchStartX.current;
-                        if (dx < -50) setLightbox(l => ({ ...l, currentIndex: Math.min(l.currentIndex + 1, l.images.length - 1) }));
-                        if (dx >  50) setLightbox(l => ({ ...l, currentIndex: Math.max(l.currentIndex - 1, 0) }));
-                        touchStartX.current = null;
-                    }}
-                >
-                    <button className="lightbox-close" aria-label="Close lightbox" onClick={() => setLightbox(null)}>✕</button>
-                    <button
-                        aria-label="Previous image"
-                        className="lightbox-nav lightbox-prev"
-                        onClick={e => { e.stopPropagation(); setLightbox(l => ({ ...l, currentIndex: Math.max(l.currentIndex - 1, 0) })); }}
-                        disabled={lightbox.currentIndex === 0}
-                    >‹</button>
-                    <img
-                        className="lightbox-image"
-                        src={lightbox.images[lightbox.currentIndex]}
-                        alt={`Event ${lightbox.currentIndex + 1} of ${lightbox.images.length}`}
-                        onClick={e => e.stopPropagation()}
-                    />
-                    <button
-                        aria-label="Next image"
-                        className="lightbox-nav lightbox-next"
-                        onClick={e => { e.stopPropagation(); setLightbox(l => ({ ...l, currentIndex: Math.min(l.currentIndex + 1, l.images.length - 1) })); }}
-                        disabled={lightbox.currentIndex === lightbox.images.length - 1}
-                    >›</button>
-                    <span className="lightbox-counter">{lightbox.currentIndex + 1} / {lightbox.images.length}</span>
-                </div>
-            )}
         </main>
     );
 }
