@@ -10,7 +10,7 @@
     scroll-margin-top: 100px;
 }
 
-.eventFormSection h1 {
+.eventFormSection h2 {
     font-size: 3em;
     margin-bottom: 40px;
     color: #bad8d0;
@@ -18,6 +18,7 @@
         0 0 2px #87CEEB,
         0 0 7px #87CEEB,
         0 0 3px #87CEEB;
+    text-transform: uppercase;
 }
 
 .eventFormContainer {
@@ -28,7 +29,7 @@
     border: 1px solid rgba(135, 206, 235, 0.1);
 }
 
-.eventFormContainer h2 {
+.eventFormContainer h3 {
     color: #87CEEB;
     font-size: 1.8em;
     margin-bottom: 30px;
@@ -123,7 +124,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .eventFormSection h1 {
+    .eventFormSection h2 {
         font-size: 2.5em;
     }
 

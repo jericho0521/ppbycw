@@ -25,6 +25,7 @@
     font-size: 1.5em;
     padding-left: 2rem;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .nav-bar ul {
@@ -48,6 +49,7 @@
     font-size: 1.1em;
     transition: color 0.3s;
     padding: 7px;
+    text-transform: uppercase;
 }
 
 .nav-bar ul li a:hover {

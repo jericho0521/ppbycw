@@ -4,10 +4,10 @@ import logo from '../../Images/optimized/pp_logo.png';
 import styles from './ReservationHero.module.css';
 
 const STATS = [
-  { value: '2024', label: 'FOUNDED' },
-  { value: '3', label: 'GAMING RIGS' },
-  { value: '14', unit: 'HRS', label: 'OPEN DAILY' },
-  { value: '7', label: 'DAYS A WEEK' }
+  { value: '2024', label: 'Founded' },
+  { value: '3', label: 'Gaming Rigs' },
+  { value: '14', unit: 'hrs', label: 'Open Daily' },
+  { value: '7', label: 'Days a Week' }
 ];
 
 function ReservationHero() {
@@ -16,10 +16,10 @@ function ReservationHero() {
       <section id="reservation" className={styles.reservation}>
         <div className={styles.titleContainer}>
           <div className={styles.logoImage}>
-            <img src={logo} alt="Project Play Logo" fetchpriority="high" />
+            <img src={logo} alt="Project Play By CW" fetchpriority="high" />
           </div>
-          <p className={styles.heroTagline}>
-            {'WHERE GAMERS BELONG, PLAY TODAY'.split('').map((character, index) => (
+          <h1 className={styles.heroTagline}>
+            {'Project Play By CW: Sim Racing & Gaming in Bandar Sunway'.split('').map((character, index) => (
               <span
                 key={index}
                 className={styles.taglineCharacter}
@@ -28,17 +28,18 @@ function ReservationHero() {
                 {character === ' ' ? '\u00A0' : character}
               </span>
             ))}
-          </p>
+          </h1>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.reservationButton}
           >
-            <h4 className="montserrat-bold">RESERVATION</h4>
+            <span className="montserrat-bold">Reserve Now</span>
           </a>
-          <br />
-          <h4>*APPLICABLE ONLY FOR PLAYSTATION 5 &amp; RACING SIMULATOR</h4>
+          <p className={styles.bookingNote}>
+            *Applicable only to PlayStation 5 and racing simulator bookings.
+          </p>
         </div>
       </section>
 

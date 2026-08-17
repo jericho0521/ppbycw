@@ -9,12 +9,12 @@ import community6 from '../../Images/optimized/community_6.png';
 import styles from './VenueOverview.module.css';
 
 const COMMUNITY_IMAGES = [
-  { src: store, alt: 'Store Front' },
-  { src: community1, alt: 'Community Member 1' },
-  { src: community2, alt: 'Community Member 2' },
-  { src: community4, alt: 'Community Member 3' },
-  { src: community5, alt: 'Community Member 4' },
-  { src: community6, alt: 'Community Member 5' }
+  { src: store, alt: 'Project Play By CW storefront in Bandar Sunway' },
+  { src: community1, alt: 'Two gamers playing at Project Play PC stations' },
+  { src: community2, alt: 'Gamer at a PC near the Project Play entrance' },
+  { src: community4, alt: 'Project Play community member making peace signs' },
+  { src: community5, alt: 'Gamer seated at a Project Play PC station' },
+  { src: community6, alt: 'Two gamers at a row of Project Play gaming PCs' }
 ];
 
 function VenueOverview() {
@@ -23,8 +23,12 @@ function VenueOverview() {
       <section id="promotion" className={styles.promotion}>
         <div className={styles.promoBox}>
           <div className={styles.promoSection}>
-            <h2>PROMOTIONS</h2>
-            <img src={promotion} alt="Promo 1" loading="lazy" />
+            <h2>Promotions</h2>
+            <img
+              src={promotion}
+              alt="Race & Relax daily racing simulator promotion for four players"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -32,14 +36,13 @@ function VenueOverview() {
       <section id="about" className={styles.about}>
         <div className={styles.sectionBody}>
           <div className={styles.sectionContainer}>
-            <h1 className="section-heading"><b>ABOUT US</b></h1>
+            <h2 className="section-heading"><b>About Us</b></h2>
             <div className={styles.contentCategory}>
               <div className={styles.contentDetails}>
                 <p>
-                  Project Play By CW founded in 2024. Project Play is more than just a gaming hub.
-                  It's space where passions come alive, where everyone, friends and family could come
-                  together, have some fun and find a sense of belonging. It's not just about the games
-                  we play, but the connections we build.
+                  Founded in 2024, Project Play By CW is more than a gaming hub. It is a
+                  welcoming space in Bandar Sunway where friends, families, and gaming
+                  communities can play, compete, and connect.
                 </p>
               </div>
             </div>
@@ -50,15 +53,13 @@ function VenueOverview() {
       <section id="community" className={styles.community}>
         <div className={styles.sectionBody}>
           <div className={styles.sectionContainer}>
-            <h1 className="section-heading"><b>OUR COMMUNITY</b></h1>
+            <h2 className="section-heading"><b>Our Community</b></h2>
             <div className={styles.contentCategory}>
               <div className={styles.contentDetails}>
                 <p>
-                  Whether you're a seasoned competitor, a casual gamer, or someone simply seeking a place to unwind,
-                  Project Play By CW is here to welcome you. It's a place where your enthusiasm is shared,
-                  your victories celebrated, and where every moment spent here feels like a part of home.
-                  At Project Play By CW, you're never just a player, you're a valued member of a family.
-                  Welcome to a place where you belong.
+                  Whether you are a seasoned competitor, a casual gamer, or simply looking
+                  for a place to unwind, you are welcome at Project Play By CW. Share your
+                  enthusiasm, celebrate each victory, and find a community where you belong.
                 </p>
               </div>
             </div>

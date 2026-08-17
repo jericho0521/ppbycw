@@ -8,19 +8,19 @@ import styles from './GamingOfferings.module.css';
 const OFFERINGS = [
   {
     title: 'Racing Simulator',
-    detailTitle: 'SPECS',
-    details: ['Playstation 5', 'Logitech G29'],
+    detailTitle: 'Specifications',
+    details: ['PlayStation 5', 'Logitech G29'],
     image: racingSimulator
   },
   {
     title: 'PC Gaming',
-    detailTitle: 'SPECS',
-    details: ['AMD RYZEN 5 5500', 'MSI GEFORCE RTX 3070', 'DDR4 3200MHZ 16GB', 'Samsung27" 165Hz'],
+    detailTitle: 'Specifications',
+    details: ['AMD Ryzen 5 5500', 'MSI GeForce RTX 3070', '16 GB DDR4-3200', 'Samsung 27-inch 165 Hz'],
     image: pcGaming
   },
   {
-    title: 'Playstation 5',
-    detailTitle: 'GAMES',
+    title: 'PlayStation 5',
+    detailTitle: 'Games',
     details: PS5_GAMES,
     image: playstation
   }
@@ -32,8 +32,8 @@ function GamingOfferings() {
       <div className={styles.rowBar}>
         <div id="rigs-section" className={styles.titleContainer}>
           <br />
-          <h1><b>SERVICES &amp; RIGS</b></h1>
-          <p>click image for more details</p>
+          <h2><b>Services &amp; Rigs</b></h2>
+          <p>Select an image to view specifications and games.</p>
           <br />
         </div>
 
@@ -44,7 +44,7 @@ function GamingOfferings() {
               <div className={styles.overlayText}>
                 <div className={styles.initialText}>{offering.title}</div>
                 <div className={styles.hoverText}>
-                  <h1><b>{offering.detailTitle}</b></h1>
+                  <h3><b>{offering.detailTitle}</b></h3>
                   {offering.details.map((detail) => <p key={detail}>{detail}</p>)}
                 </div>
               </div>

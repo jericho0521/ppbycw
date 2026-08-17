@@ -62,9 +62,9 @@ function EventInquiry() {
     return (
         <div className={styles.rowBar}>
             <section className={styles.eventFormSection} id="event-form-section">
-                <h1>EVENT INQUIRY</h1>
+                <h2>Event Inquiry</h2>
                 <div className={styles.eventFormContainer}>
-                    <h2>Event Inquiry Form</h2>
+                    <h3>Event Inquiry Form</h3>
                     <form aria-label="Event inquiry form" className={styles.eventForm} onSubmit={handleSubmit}>
                         {FIELDS.map((field) => (
                             <div className={styles.formGroup} key={field.name}>
@@ -107,7 +107,7 @@ function EventInquiry() {
                             </div>
                         )}
                         <button className={styles.submitButton} disabled={isSubmitting} type="submit">
-                            {isSubmitting ? 'SENDING...' : 'SUBMIT'}
+                            {isSubmitting ? 'Sending…' : 'Submit'}
                         </button>
                     </form>
                 </div>
