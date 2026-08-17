@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
+import PageSeo from './Components/PageSeo';
 import Home from './Pages/Home';
 import Events from './Pages/Events';
 import FAQ from './Pages/FAQ';
@@ -13,31 +14,18 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './Assets/Font.css';
 import './App.css';
 
-// Component to handle canonical URLs
-const CanonicalURL = () => {
-  const location = useLocation();
-  const baseUrl = 'https://ppbycw.com'; // Your actual domain
-  const canonicalUrl = `${baseUrl}${location.pathname}`;
-  
-  return (
-    <Helmet>
-      <link rel="canonical" href={canonicalUrl} />
-    </Helmet>
-  );
-};
-
 function App() {
   return (
     <HelmetProvider>
     <Router>
       <div className="App">
-          <CanonicalURL />
+          <PageSeo />
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/about" element={<About />} />
+          <Route caseSensitive path="/" element={<Home />} />
+          <Route caseSensitive path="/events" element={<Events />} />
+          <Route caseSensitive path="/faq" element={<FAQ />} />
+          <Route caseSensitive path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -51,7 +51,7 @@ describe('PastEvents', () => {
         container.remove();
     });
 
-    it('renders the catalog in order with one heading and padded numbering', () => {
+    it('renders the catalog in order with one heading and visual-only padded numbering', () => {
         renderPastEvents();
 
         expect(screen.getAllByRole('heading', { name: 'PAST EVENTS' })).toHaveLength(1);
@@ -59,7 +59,11 @@ describe('PastEvents', () => {
             .toEqual(eventsData.map((event) => event.title));
 
         eventsData.forEach((event, index) => {
-            expect(screen.getByText(String(index + 1).padStart(2, '0'))).toBeInTheDocument();
+            const eventNumber = String(index + 1).padStart(2, '0');
+            const numberBadge = container.querySelector(`[data-event-number="${eventNumber}"]`);
+
+            expect(screen.queryByText(eventNumber)).not.toBeInTheDocument();
+            expect(numberBadge).toHaveAttribute('aria-hidden', 'true');
             expect(screen.getAllByRole('img', { name: new RegExp(`^${event.title}`) }))
                 .toHaveLength(event.images.length);
         });

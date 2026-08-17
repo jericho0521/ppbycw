@@ -2,202 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1b1b32" />
-    <meta name="description" content="Project Play By CW - Premier Sim Racing & Gaming Hub in Bandar Sunway | Racing Simulator, PC Gaming, PS5" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      data-rh="true"
+      name="description"
+      content="Play on racing simulators, high-performance gaming PCs, and PS5 consoles at Project Play By CW in Bandar Sunway, Subang Jaya."
+    />
+    <meta
+      data-rh="true"
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <script>
+      (function () {
+        var pathname = window.location.pathname.replace(/\/+$/, '').toLowerCase() || '/';
+        var indexablePaths = ['/', '/events', '/faq', '/about'];
 
-    <meta property="og:title" content="Project Play By CW - Sim Racing & Gaming Hub" />
-    <meta property="og:description" content="Welcome to Project Play By CW – Bandar Sunway's premier sim racing and gaming hub! Experience professional racing simulators, high-performance gaming PCs, and PS5 gaming stations. Your ultimate destination for competitive gaming and simulation racing." />
-    <meta property="og:image" content="%PUBLIC_URL%/ProjectPlay_Logo.png" />
-    <meta property="og:url" content="https://ppbycw.com" />
-    <meta property="og:type" content="website" />
+        if (!indexablePaths.includes(pathname)) {
+          document.querySelector('meta[name="robots"]').setAttribute('content', 'noindex, nofollow');
+        }
+      }());
+    </script>
+
+    <meta data-rh="true" property="og:title" content="Project Play By CW | Sim Racing &amp; Gaming Hub in Sunway" />
+    <meta
+      data-rh="true"
+      property="og:description"
+      content="Play on racing simulators, high-performance gaming PCs, and PS5 consoles at Project Play By CW in Bandar Sunway, Subang Jaya."
+    />
+    <meta data-rh="true" property="og:image" content="https://ppbycw.com/ProjectPlay_Logo.png" />
+    <meta data-rh="true" property="og:url" content="https://ppbycw.com/" />
+    <meta data-rh="true" property="og:site_name" content="Project Play By CW" />
+    <meta data-rh="true" property="og:locale" content="en_MY" />
+    <meta data-rh="true" property="og:type" content="website" />
+
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta data-rh="true" name="twitter:title" content="Project Play By CW | Sim Racing &amp; Gaming Hub in Sunway" />
+    <meta
+      data-rh="true"
+      name="twitter:description"
+      content="Play on racing simulators, high-performance gaming PCs, and PS5 consoles at Project Play By CW in Bandar Sunway, Subang Jaya."
+    />
+    <meta data-rh="true" name="twitter:image" content="https://ppbycw.com/ProjectPlay_Logo.png" />
+
     <meta name="google-site-verification" content="xg8VxYr2X-gQzwaQv3jprMGj8B62XAjbi_798_btLxE" />
-
-    <!-- Keywords for search engines -->
-    <meta name="keywords" content="sim racing, racing simulator, gaming hub, esports center, gaming cafe, internet cafe, bandar sunway, sunway, subang jaya, ps5 gaming, pc gaming, gaming center, malaysia gaming, racing games, gaming community, gaming events, competitive gaming, simulation racing" />
-    
-    <!-- Location-specific meta tags -->
-    <meta name="geo.region" content="MY-SE" />
-    <meta name="geo.position" content="3.0738;101.5183" />
-    <meta name="ICBM" content="3.0738, 101.5183" />
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Project Play By CW",
-      "image": "https://ppbycw.com/ProjectPlay_Logo.png",
-      "description": "Sunway's premier gaming hub featuring Racing Simulators, High-Performance PCs, and PS5 consoles. Located in Subang Jaya, Malaysia.",
-      "@id": "https://ppbycw.com",
-      "url": "https://ppbycw.com",
-      "telephone": "+601116281524",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Sunway",
-        "addressLocality": "Subang Jaya",
-        "addressRegion": "Selangor",
-        "postalCode": "47500",
-        "addressCountry": "MY"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 3.0738,
-        "longitude": 101.5183
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "12:00",
-          "closes": "02:00"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/ppbycw",
-        "https://www.instagram.com/ppbycw"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Gaming Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Racing Simulator",
-            "description": "Professional racing simulator with Logitech G29",
-            "url": "https://ppbycw.com/#services"
-          },
-          {
-            "@type": "Offer",
-            "name": "PC Gaming",
-            "description": "High-performance gaming PCs with latest titles",
-            "url": "https://ppbycw.com/#services"
-          },
-          {
-            "@type": "Offer",
-            "name": "PlayStation 5",
-            "description": "Latest PS5 games and accessories",
-            "url": "https://ppbycw.com/#services"
-          }
-        ]
-      }
-    }
-    </script>
-
-    <!-- Additional Schema for FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What racing simulator equipment do you have?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We feature the Logitech G29 racing wheel and pedal set for an immersive racing experience."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where is Project Play By CW located?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We are located in Bandar Sunway, Subang Jaya, Malaysia."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What gaming services do you offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer Racing Simulators, High-Performance PC Gaming, and PlayStation 5 gaming services."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Add breadcrumb navigation -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Events",
-        "item": "https://ppbycw.com/Events"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services & Rigs",
-          "item": "https://ppbycw.com/#services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Pricing & Rates",
-          "item": "https://ppbycw.com/#pricing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "About Us",
-          "item": "https://ppbycw.com/#about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Community",
-          "item": "https://ppbycw.com/#community"
-        }
-      ]
-    }
-    </script>
-
-    <!-- <img src="%PUBLIC_URL%/my-image.png" alt="meow"/> -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <title>Project Play By CW - Sim Racing & Gaming Hub | Bandar Sunway</title>
+    <title data-rh="true">Project Play By CW | Sim Racing &amp; Gaming Hub in Sunway</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

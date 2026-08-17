@@ -62,9 +62,11 @@ function PastEvents() {
                     <div className={styles.pastEvents}>
                         {eventIndex === 0 && <h1>PAST EVENTS</h1>}
                         <div className={styles.eventHeader}>
-                            <span className={styles.eventNumberBadge}>
-                                {String(eventIndex + 1).padStart(2, '0')}
-                            </span>
+                            <span
+                                aria-hidden="true"
+                                className={styles.eventNumberBadge}
+                                data-event-number={String(eventIndex + 1).padStart(2, '0')}
+                            />
                             <h3>{event.title}</h3>
                         </div>
                         <div className={styles.innerText}>

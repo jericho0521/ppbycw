@@ -126,6 +126,10 @@
     user-select: none;
 }
 
+.eventNumberBadge::before {
+    content: attr(data-event-number);
+}
+
 .innerText ul li {
     list-style: none;
     padding: 6px 0;
