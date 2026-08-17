@@ -55,6 +55,7 @@ assert.ok(!existsSync(new URL('../public/ProjectPlay_Logo.png', import.meta.url)
 
 const vercelConfig = JSON.parse(readText('vercel.json'));
 assert.equal(vercelConfig.cleanUrls, true);
+assert.equal(vercelConfig.trailingSlash, false);
 assert.ok(!('rewrites' in vercelConfig), 'Static route shells must take precedence over a SPA rewrite');
 assert.ok(
     vercelConfig.redirects.some(({ source, destination }) => (
