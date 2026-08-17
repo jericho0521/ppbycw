@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Events.css'; 
+import './Events.css';
 import EventTemplate from '../Components/EventTemplate';
-import { getEventsInOrder } from '../Data/eventsData'; 
-
+import { eventsData } from '../Data/eventsData';
 
 function Events() {
     const [formStatus, setFormStatus] = useState(null);
@@ -70,8 +69,6 @@ function Events() {
         });
     };
 
-    // Get all events in order
-    const events = getEventsInOrder();
     return (
         <main className="events-container">
             <section className="event-details">
@@ -87,7 +84,7 @@ function Events() {
             </section>
 
             {/* Render all events using the template */}
-            {events.map((event, index) => (
+            {eventsData.map((event, index) => (
                 <EventTemplate
                     key={event.id}
                     eventNumber={index + 1}
@@ -95,8 +92,6 @@ function Events() {
                     description={event.description}
                     additionalInfo={event.additionalInfo}
                     images={event.images}
-                    showTitle={event.showTitle}
-                    className={event.className}
                     onImageClick={(images, idx) => setLightbox({ images, currentIndex: idx })}
                 />
             ))}

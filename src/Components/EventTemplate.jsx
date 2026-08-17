@@ -6,8 +6,6 @@ const EventTemplate = ({
   description,
   additionalInfo = null,
   images,
-  showTitle = true,
-  className = "row-bar5",
   eventNumber,
   onImageClick
 }) => {
@@ -26,9 +24,9 @@ const EventTemplate = ({
   };
 
   return (
-    <div className={className}>
+    <div className="row-bar5">
       <div className="past-events">
-        {showTitle && <h1>PAST EVENTS</h1>}
+        {eventNumber === 1 && <h1>PAST EVENTS</h1>}
         <div className="event-header">
           {eventNumber && <span className="event-number-badge">{String(eventNumber).padStart(2, '0')}</span>}
           <h3>{title}</h3>
