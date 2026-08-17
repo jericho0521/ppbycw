@@ -51,24 +51,25 @@ describe('PastEvents', () => {
         container.remove();
     });
 
-    it('renders the catalog in order with one heading and padded numbering', () => {
+    it('renders the catalog in order without index-like event numbers', () => {
         renderPastEvents();
 
-        expect(screen.getAllByRole('heading', { name: 'PAST EVENTS' })).toHaveLength(1);
+        expect(screen.getAllByRole('heading', { name: 'Past Events', level: 2 })).toHaveLength(1);
         expect(screen.getAllByRole('heading', { level: 3 }).map((heading) => heading.textContent))
             .toEqual(eventsData.map((event) => event.title));
 
-        eventsData.forEach((event, index) => {
-            expect(screen.getByText(String(index + 1).padStart(2, '0'))).toBeInTheDocument();
+        eventsData.forEach((event) => {
             expect(screen.getAllByRole('img', { name: new RegExp(`^${event.title}`) }))
                 .toHaveLength(event.images.length);
         });
+
+        expect(container).not.toHaveTextContent(/\b0[1-9]\b/);
     });
 
     it('opens images and clamps button navigation at both boundaries', () => {
         renderPastEvents();
 
-        click(screen.getByRole('img', { name: 'Monash Cup 2025 1' }));
+        click(screen.getByRole('img', { name: 'Monash Cup 2025, scene 1' }));
 
         const previousButton = screen.getByRole('button', { name: 'Previous image' });
         const nextButton = screen.getByRole('button', { name: 'Next image' });
@@ -90,7 +91,7 @@ describe('PastEvents', () => {
     it('supports bounded keyboard navigation and Escape', () => {
         renderPastEvents();
 
-        click(screen.getByRole('img', { name: 'Monash Cup 2025 1' }));
+        click(screen.getByRole('img', { name: 'Monash Cup 2025, scene 1' }));
 
         pressKey('ArrowLeft');
         expect(screen.getByText('1 / 4')).toBeInTheDocument();
@@ -105,7 +106,7 @@ describe('PastEvents', () => {
     it('closes when the overlay is clicked', () => {
         renderPastEvents();
 
-        click(screen.getByRole('img', { name: 'Monash Cup 2025 1' }));
+        click(screen.getByRole('img', { name: 'Monash Cup 2025, scene 1' }));
         click(screen.getByRole('dialog', { name: 'Event image viewer' }));
 
         expect(screen.queryByRole('dialog', { name: 'Event image viewer' })).not.toBeInTheDocument();
@@ -114,7 +115,7 @@ describe('PastEvents', () => {
     it('uses a strict 50-pixel swipe threshold and clamps touch navigation', () => {
         renderPastEvents();
 
-        click(screen.getByRole('img', { name: 'Monash Cup 2025 1' }));
+        click(screen.getByRole('img', { name: 'Monash Cup 2025, scene 1' }));
         const viewer = screen.getByRole('dialog', { name: 'Event image viewer' });
 
         swipe(viewer, 100, 50);

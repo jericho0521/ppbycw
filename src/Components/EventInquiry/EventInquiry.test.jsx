@@ -89,7 +89,7 @@ describe('EventInquiry', () => {
 
         expect(submitEventInquiry).toHaveBeenCalledTimes(1);
         expect(submitEventInquiry).toHaveBeenCalledWith(INQUIRY);
-        expect(screen.getByRole('button', { name: 'SENDING...' })).toBeDisabled();
+        expect(screen.getByRole('button', { name: 'Sending…' })).toBeDisabled();
     });
 
     it('resets entered values after a successful submission', async () => {

@@ -1,9 +1,46 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "has": [
+        {
+          "type": "host",
+          "value": "www.ppbycw.com"
+        }
+      ],
+      "destination": "https://ppbycw.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/Events",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/FAQ",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/About",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/#pricing",
+      "permanent": true
+    },
+    {
+      "source": "/community",
+      "destination": "/#community",
+      "permanent": true
     }
   ]
 }

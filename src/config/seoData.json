@@ -1,0 +1,22 @@
+{
+  "/": {
+    "title": "Project Play By CW | Sim Racing & Gaming in Bandar Sunway",
+    "description": "Play on racing simulators, high-performance gaming PCs, and PlayStation 5 consoles at Project Play By CW in Bandar Sunway, Subang Jaya.",
+    "label": "Home"
+  },
+  "/events": {
+    "title": "Gaming Events & Venue Hire | Project Play By CW",
+    "description": "Host gaming tournaments, corporate events, birthdays, and group sessions at Project Play By CW in Bandar Sunway. View past events and enquire today.",
+    "label": "Events"
+  },
+  "/faq": {
+    "title": "Gaming Hub FAQ | Project Play By CW",
+    "description": "Find answers about Project Play By CW pricing, gaming equipment, opening hours, membership, reservations, and events in Bandar Sunway.",
+    "label": "FAQ"
+  },
+  "/about": {
+    "title": "About Project Play By CW | Bandar Sunway Gaming Hub",
+    "description": "Learn about Project Play By CW, our gaming community, professional sim racing setup, gaming PCs, PlayStation 5 consoles, and venue in Bandar Sunway.",
+    "label": "About"
+  }
+}

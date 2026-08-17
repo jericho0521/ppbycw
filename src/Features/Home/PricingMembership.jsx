@@ -2,20 +2,20 @@ import React from 'react';
 import styles from './PricingMembership.module.css';
 
 const HOURLY_RATES = [
-  { title: 'PC GAMING', nonMember: 'RM8/HR', member: 'RM6/HR' },
-  { title: 'RACING SIMULATOR', nonMember: 'RM15/HR', member: 'RM12/HR' },
-  { title: 'PS5', nonMember: 'RM30/HR', member: 'RM25/HR' }
+  { title: 'PC Gaming', nonMember: 'RM8/hour', member: 'RM6/hour' },
+  { title: 'Racing Simulator', nonMember: 'RM15/hour', member: 'RM12/hour' },
+  { title: 'PlayStation 5', nonMember: 'RM30/hour', member: 'RM25/hour' }
 ];
 
 const MEMBER_PACKAGES = [
-  { title: 'PC Gaming', prices: ['RM15/3HR', 'RM26/6HR'] },
-  { title: 'Racing Simulator', prices: ['RM30/3HR', 'RM50/6HR'] }
+  { title: 'PC Gaming', prices: ['RM15 / 3 hours', 'RM26 / 6 hours'] },
+  { title: 'Racing Simulator', prices: ['RM30 / 3 hours', 'RM50 / 6 hours'] }
 ];
 
 const BIRTHDAY_BENEFITS = [
-  { duration: 'FREE 1 HOUR', offering: 'PLAYSTATION 5' },
-  { duration: 'FREE 2 HOUR', offering: 'RACING SIMULATOR' },
-  { duration: 'FREE 3 HOUR', offering: 'PC GAMING' }
+  { duration: 'Free 1 hour', offering: 'PlayStation 5' },
+  { duration: 'Free 2 hours', offering: 'Racing Simulator' },
+  { duration: 'Free 3 hours', offering: 'PC Gaming' }
 ];
 
 function PricingMembership() {
@@ -23,14 +23,14 @@ function PricingMembership() {
     <section id="pricing" className={styles.pricing}>
       <div className={styles.sectionBody}>
         <div id="pricing-section" className={styles.pricingSection}>
-          <h1><b>PRICING &amp; RATES</b></h1>
+          <h2><b>Pricing &amp; Rates</b></h2>
         </div>
 
         <div className={styles.boxContainer}>
           <div className={styles.pricingBox}>
             {HOURLY_RATES.map((rate) => (
               <div key={rate.title} className={styles.pricingCategory}>
-                <h2>{rate.title}</h2>
+                <h3>{rate.title}</h3>
                 <div className={styles.pricingDetails}>
                   <p>
                     <span>Non-member</span>
@@ -45,7 +45,7 @@ function PricingMembership() {
             ))}
 
             <div className={styles.pricingCategory}>
-              <h2>MEMBER EXCLUSIVE PACKAGES</h2>
+              <h3>Member-Exclusive Packages</h3>
               <div className={styles.pricingDetails}>
                 {MEMBER_PACKAGES.map((memberPackage) => (
                   <div key={memberPackage.title} className={styles.package}>
@@ -64,24 +64,24 @@ function PricingMembership() {
           <div className={styles.memberBox}>
             <div className={styles.pricingSection}>
               <div className={styles.pricingCategory}>
-                <h2>JOIN OUR MEMBERSHIP NOW</h2>
+                <h3>Join Our Membership</h3>
                 <div className={styles.memberDetails}>
-                  <p>Registration fee of RM100<br />Enjoy member exclusive rates and packages</p>
+                  <p>RM100 registration fee<br />Enjoy member-exclusive rates and packages.</p>
                 </div>
               </div>
 
               <div className={styles.pricingCategory}>
-                <h2>SPECIAL RATES</h2>
+                <h3>Special Reload Rates</h3>
                 <div className={styles.pricingDetails}>
                   <p>
-                    RM50 reload:<br />bonus credit of RM 5<br />
-                    <span>RM100 reload:<br />bonus credit of RM15</span>
+                    RM50 reload:<br />RM5 bonus credit<br />
+                    <span>RM100 reload:<br />RM15 bonus credit</span>
                   </p>
                 </div>
               </div>
 
               <div className={styles.pricingCategory}>
-                <h2 className={styles.birthdayBenefitsTitle}>BIRTHDAY BENEFITS</h2>
+                <h3 className={styles.birthdayBenefitsTitle}>Birthday Benefits</h3>
                 <div className={styles.birthdayBenefitsDetails}>
                   {BIRTHDAY_BENEFITS.map((benefit, index) => (
                     <React.Fragment key={benefit.offering}>

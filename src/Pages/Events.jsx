@@ -8,12 +8,12 @@ function Events() {
         <main className={styles.eventsContainer}>
             <section className={styles.eventDetails}>
                 <div className={styles.intro}>
-                    <h1>EVENTS WITH <br />PROJECT PLAY</h1>
+                    <h1>Gaming Events at <br />Project Play By CW</h1>
                     <div className={styles.innerText}>
-                        <p>If you're looking for the perfect venue to host your next event, <br />we've got you covered. Find us at Project Play!</p>
+                        <p>Host your next tournament, birthday, corporate event, or group gaming session with us in Bandar Sunway.</p>
                     </div>
                     <a className={styles.contactButton} href="#event-form-section">
-                        CONTACT US
+                        Contact Us
                     </a>
                 </div>
             </section>

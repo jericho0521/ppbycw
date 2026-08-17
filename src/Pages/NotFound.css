@@ -64,6 +64,7 @@
   letter-spacing: 3px;
   margin-bottom: 24px;
   text-shadow: 0 0 5px #87CEEB;
+  text-transform: uppercase;
 }
 
 .notfound-path {
@@ -97,6 +98,7 @@
   letter-spacing: 2px;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
+  text-transform: uppercase;
 }
 
 .notfound-button:hover {

@@ -10,7 +10,7 @@
   justify-content: center;
   margin-top: -150px;
   position: relative;
-  background-image: url('../../Images/background_ppbycw.png');
+  background-image: url('../../Images/optimized/background_ppbycw_optimized.png');
   background-size: cover;
   background-position: center center;
 }
@@ -66,7 +66,7 @@
   height: auto;
 }
 
-.titleContainer h4 {
+.bookingNote {
   margin: 10px 0;
   color: #fff;
   font-family: 'Electrolize', sans-serif;
@@ -100,6 +100,7 @@
   text-decoration: none;
   transition: box-shadow 0.3s, border-color 0.3s, color 0.3s;
   animation: glowPulse 3s ease-in-out infinite;
+  text-transform: uppercase;
 }
 
 .reservationButton:hover {
@@ -128,6 +129,7 @@
   color: rgba(135, 206, 235, 0.55);
   font-family: 'Electrolize', sans-serif;
   font-size: 0.85em;
+  font-weight: 400;
   letter-spacing: 6px;
   text-transform: uppercase;
 }
@@ -220,7 +222,7 @@
     padding: 10px;
   }
 
-  .titleContainer h4 {
+  .bookingNote {
     margin: 5px 0;
     font-size: 0.75em;
     letter-spacing: 0.5px;
@@ -236,7 +238,7 @@
     font-size: 16px;
   }
 
-  .reservationButton h4 {
+  .reservationButton span {
     margin: 0;
     font-size: 14px;
   }
@@ -279,7 +281,7 @@
     padding: 5px;
   }
 
-  .titleContainer h4 {
+  .bookingNote {
     font-size: 0.7em;
   }
 }
