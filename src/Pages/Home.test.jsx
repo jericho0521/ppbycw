@@ -46,11 +46,12 @@ describe('Home', () => {
   it('preserves reservation, offering, and pricing content', () => {
     renderHome();
 
-    expect(screen.getByRole('link', { name: 'RESERVATION' })).toHaveAttribute('href', WHATSAPP_URL);
-    expect(screen.getByRole('img', { name: 'Project Play Logo' })).toHaveAttribute('fetchpriority', 'high');
-    expect(screen.getByRole('heading', { name: 'SERVICES & RIGS' })).toBeInTheDocument();
-    expect(screen.getAllByText('RM6/HR')).toHaveLength(1);
-    expect(screen.getByText('FREE 3 HOUR')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Reserve Now' })).toHaveAttribute('href', WHATSAPP_URL);
+    expect(screen.getByRole('img', { name: 'Project Play By CW' })).toHaveAttribute('fetchpriority', 'high');
+    expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
+    expect(screen.getByRole('heading', { name: 'Services & Rigs' })).toBeInTheDocument();
+    expect(screen.getAllByText('RM6/hour')).toHaveLength(1);
+    expect(screen.getByText('Free 3 hours')).toBeInTheDocument();
 
     PS5_GAMES.forEach((game) => {
       expect(screen.getByText(game)).toBeInTheDocument();
@@ -60,10 +61,10 @@ describe('Home', () => {
   it('preserves venue copy and community imagery', () => {
     renderHome();
 
-    expect(screen.getByRole('heading', { name: 'ABOUT US' })).toBeInTheDocument();
-    expect(screen.getByText(/Project Play By CW founded in 2024/)).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'OUR COMMUNITY' })).toBeInTheDocument();
-    expect(screen.getAllByRole('img', { name: /Community Member/ })).toHaveLength(5);
-    expect(screen.getByRole('img', { name: 'Store Front' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'About Us' })).toBeInTheDocument();
+    expect(screen.getByText(/Founded in 2024, Project Play By CW/)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Our Community' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /storefront in Bandar Sunway/ })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /making peace signs/ })).toBeInTheDocument();
   });
 });

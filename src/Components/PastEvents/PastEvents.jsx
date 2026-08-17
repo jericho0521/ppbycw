@@ -37,8 +37,8 @@ function PastEvents() {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [closeViewer, moveViewer]);
 
-    const openViewer = (images, currentIndex) => {
-        setViewer({ images, currentIndex });
+    const openViewer = (title, images, currentIndex) => {
+        setViewer({ title, images, currentIndex });
     };
 
     const handleTouchStart = (event) => {
@@ -60,13 +60,8 @@ function PastEvents() {
             {eventsData.map((event, eventIndex) => (
                 <div className={styles.rowBar} key={event.id}>
                     <div className={styles.pastEvents}>
-                        {eventIndex === 0 && <h1>PAST EVENTS</h1>}
+                        {eventIndex === 0 && <h2>Past Events</h2>}
                         <div className={styles.eventHeader}>
-                            <span
-                                aria-hidden="true"
-                                className={styles.eventNumberBadge}
-                                data-event-number={String(eventIndex + 1).padStart(2, '0')}
-                            />
                             <h3>{event.title}</h3>
                         </div>
                         <div className={styles.innerText}>
@@ -84,12 +79,12 @@ function PastEvents() {
                                 <div
                                     className={styles.imageWrapper}
                                     key={image}
-                                    onClick={() => openViewer(event.images, imageIndex)}
+                                    onClick={() => openViewer(event.title, event.images, imageIndex)}
                                 >
                                     <img
                                         className={styles.imageItem}
                                         src={image}
-                                        alt={`${event.title} ${imageIndex + 1}`}
+                                        alt={`${event.title}, scene ${imageIndex + 1}`}
                                         loading="lazy"
                                     />
                                     <div className={styles.imageOverlay} />
@@ -129,7 +124,7 @@ function PastEvents() {
                         ‹
                     </button>
                     <img
-                        alt={`Event ${viewer.currentIndex + 1} of ${viewer.images.length}`}
+                        alt={`${viewer.title}, scene ${viewer.currentIndex + 1} of ${viewer.images.length}`}
                         className={styles.lightboxImage}
                         onClick={(event) => event.stopPropagation()}
                         src={viewer.images[viewer.currentIndex]}

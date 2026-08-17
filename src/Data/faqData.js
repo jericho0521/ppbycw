@@ -23,7 +23,7 @@ export const faqs = [
     },
     {
         question: 'Do you offer membership benefits?',
-        answer: 'Yes! Our members enjoy exclusive rates, special packages, and bonus credits on reloads. Members get RM6/HR for PC Gaming and RM12/HR for Racing Simulator, compared to regular rates of RM8/HR and RM15/HR respectively.',
+        answer: 'Yes. Members enjoy exclusive rates, packages, and reload bonuses. Member rates are RM6/hour for PC gaming and RM12/hour for the racing simulator, compared with regular rates of RM8/hour and RM15/hour.',
         icon: 'fa-solid fa-crown'
     },
     {
@@ -33,12 +33,12 @@ export const faqs = [
     },
     {
         question: 'Can I host events at Project Play?',
-        answer: "Yes! We welcome gaming events, tournaments, and group bookings. We've successfully hosted events like the Monash Cup 2024, featuring games like Counter Strike 2, Valorant, and League of Legends.",
+        answer: 'Yes. We welcome gaming events, tournaments, and group bookings. We have hosted events such as Monash Cup, featuring Counter-Strike 2, Valorant, and League of Legends.',
         icon: 'fa-solid fa-trophy'
     },
     {
         question: 'What are your PC specifications?',
-        answer: 'Our gaming PCs are equipped with AMD Ryzen 5 5500, MSI GeForce RTX 3070, 16GB DDR4 3200MHz RAM, and 27" 165Hz Gaming Monitors for the ultimate gaming experience.',
+        answer: 'Our gaming PCs are equipped with an AMD Ryzen 5 5500 processor, MSI GeForce RTX 3070 graphics card, 16 GB of DDR4-3200 memory, and 27-inch 165 Hz Samsung monitors.',
         icon: 'fa-solid fa-desktop'
     }
 ];

@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 import PageSeo from './Components/PageSeo';
+import PathNormalizer from './Components/PathNormalizer';
 import Home from './Pages/Home';
 import Events from './Pages/Events';
 import FAQ from './Pages/FAQ';
@@ -19,7 +20,8 @@ function App() {
     <HelmetProvider>
     <Router>
       <div className="App">
-          <PageSeo />
+        <PathNormalizer />
+        <PageSeo />
         <NavBar />
         <Routes>
           <Route caseSensitive path="/" element={<Home />} />

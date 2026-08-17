@@ -258,7 +258,7 @@
     font-size: 1.1em;
 }
 
-.about-page .section-container h1 {
+.about-page .section-container .section-heading {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #bad8d0;
@@ -332,7 +332,7 @@
         font-size: 1em;
     }
 
-    .about-page .section-container h1 {
+    .about-page .section-container .section-heading {
         font-size: 1.8em;
         letter-spacing: 2px;
     }

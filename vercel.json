@@ -3,6 +3,7 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "build",
+  "cleanUrls": true,
   "redirects": [
     {
       "source": "/(.*)",
@@ -39,20 +40,6 @@
       "source": "/community",
       "destination": "/#community",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/events",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/faq",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/index.html"
     }
   ]
 }

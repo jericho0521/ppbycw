@@ -2,31 +2,23 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { faqs } from '../Data/faqData';
+import pageSeo from '../config/seoData.json';
+import { normalizePathname } from '../config/routes';
 
 const SITE_URL = 'https://ppbycw.com';
-const SOCIAL_IMAGE_URL = `${SITE_URL}/ProjectPlay_Logo.png`;
+const LOGO_URL = `${SITE_URL}/project-play-by-cw-logo.png`;
+const SOCIAL_IMAGE_URL = `${SITE_URL}/project-play-by-cw-storefront.png`;
+const SOCIAL_IMAGE_ALT = 'Project Play By CW gaming hub storefront in Bandar Sunway';
 
-export const PAGE_SEO = {
-    '/': {
-        title: 'Project Play By CW | Sim Racing & Gaming Hub in Sunway',
-        description: 'Play on racing simulators, high-performance gaming PCs, and PS5 consoles at Project Play By CW in Bandar Sunway, Subang Jaya.',
-        label: 'Home'
-    },
-    '/events': {
-        title: 'Gaming Events & Venue Hire | Project Play By CW',
-        description: 'Host gaming tournaments, corporate events, birthdays, and group sessions at Project Play By CW in Bandar Sunway. View past events and enquire today.',
-        label: 'Events'
-    },
-    '/faq': {
-        title: 'Gaming Hub FAQ | Project Play By CW',
-        description: 'Find answers about Project Play By CW pricing, gaming equipment, opening hours, membership, reservations, and events in Bandar Sunway.',
-        label: 'FAQ'
-    },
-    '/about': {
-        title: 'About Project Play By CW | Bandar Sunway Gaming Hub',
-        description: 'Learn about Project Play By CW, our gaming community, professional sim racing setup, gaming PCs, PS5 consoles, and venue in Bandar Sunway.',
-        label: 'About'
-    }
+export const PAGE_SEO = pageSeo;
+
+const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'Project Play By CW',
+    alternateName: ['Project Play', 'PPBYCW', 'ppbycw.com'],
+    url: `${SITE_URL}/`
 };
 
 const localBusinessSchema = {
@@ -35,11 +27,12 @@ const localBusinessSchema = {
     '@id': `${SITE_URL}/#business`,
     name: 'Project Play By CW',
     image: SOCIAL_IMAGE_URL,
+    logo: LOGO_URL,
     description: 'A gaming hub in Bandar Sunway featuring racing simulators, high-performance gaming PCs, and PlayStation 5 consoles.',
     url: `${SITE_URL}/`,
     telephone: '+601116281524',
     email: 'ppbycw@gmail.com',
-    priceRange: 'RM6-RM15',
+    priceRange: 'RM6-RM30',
     address: {
         '@type': 'PostalAddress',
         streetAddress: '70, Jalan PJS 11/7',
@@ -102,11 +95,6 @@ const getBreadcrumbSchema = (pathname, label) => ({
     ]
 });
 
-const normalizePathname = (pathname) => {
-    if (pathname === '/') return pathname;
-    return pathname.replace(/\/+$/, '').toLowerCase();
-};
-
 function PageSeo() {
     const location = useLocation();
     const pathname = normalizePathname(location.pathname);
@@ -117,7 +105,7 @@ function PageSeo() {
     const canonicalUrl = isIndexable ? `${SITE_URL}${pathname}` : null;
     const schemas = [];
 
-    if (pathname === '/') schemas.push(localBusinessSchema);
+    if (pathname === '/') schemas.push(websiteSchema, localBusinessSchema);
     if (pathname === '/faq') schemas.push(faqSchema);
     if (page && pathname !== '/') schemas.push(getBreadcrumbSchema(pathname, page.label));
 
@@ -134,6 +122,9 @@ function PageSeo() {
             <meta content={title} property="og:title" />
             <meta content={description} property="og:description" />
             <meta content={SOCIAL_IMAGE_URL} property="og:image" />
+            <meta content={SOCIAL_IMAGE_ALT} property="og:image:alt" />
+            <meta content="1920" property="og:image:width" />
+            <meta content="1080" property="og:image:height" />
             <meta content="Project Play By CW" property="og:site_name" />
             <meta content="en_MY" property="og:locale" />
             <meta content="website" property="og:type" />
@@ -143,6 +134,7 @@ function PageSeo() {
             <meta content={title} name="twitter:title" />
             <meta content={description} name="twitter:description" />
             <meta content={SOCIAL_IMAGE_URL} name="twitter:image" />
+            <meta content={SOCIAL_IMAGE_ALT} name="twitter:image:alt" />
 
             {schemas.map((schema) => (
                 <script key={schema['@type']} type="application/ld+json">

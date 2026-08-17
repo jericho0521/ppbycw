@@ -62,11 +62,17 @@ describe('PageSeo', () => {
         const helmet = renderPageSeo('/');
 
         expect(helmet.title.toString()).toContain(
-            'Project Play By CW | Sim Racing &amp; Gaming Hub in Sunway'
+            'Project Play By CW | Sim Racing &amp; Gaming in Bandar Sunway'
         );
         expect(getStructuredData(helmet)).toEqual([
             expect.objectContaining({
+                '@type': 'WebSite',
+                name: 'Project Play By CW',
+                alternateName: expect.arrayContaining(['Project Play', 'PPBYCW'])
+            }),
+            expect.objectContaining({
                 '@type': 'LocalBusiness',
+                priceRange: 'RM6-RM30',
                 geo: expect.objectContaining({
                     latitude: 3.073554,
                     longitude: 101.599647
